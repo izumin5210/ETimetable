@@ -1,7 +1,11 @@
 app = angular.module 'ETimetable', ['ngRoute']
 
 app.constant 'config',
-  apiEndpoint: 'http://0.0.0.0:9000/api/v1/'
+  apiEndpoint: 'http://0.0.0.0:3000/api/v1'
+  defaultParams:
+    year: 2013
+    term: '後期'
+    callback: 'JSON_CALLBACK'
 
 app.config ($routeProvider, $locationProvider) ->
   # TODO:
