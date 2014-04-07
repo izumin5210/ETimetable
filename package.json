@@ -1,0 +1,20 @@
+{
+  "name": "ETimetable",
+  "version": "0.0.1",
+  "description": "Timetables and syllabuses viewer for students of ANCT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "izumin5210 <contact@izumin.info>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-coffee": "^0.10.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^0.4.4",
+    "grunt-contrib-compass": "^0.7.2",
+    "grunt-contrib-connect": "^0.7.1"
+  }
+}
