@@ -1,4 +1,12 @@
-<p>コースを選択してください</p>
-<ul>
-  <li ng-repeat="course in courses"><a ng-href="{{course.href}}">{{course.label}}</a></li>
+<header class="header">
+  <p>コースを選択してください</p>
+</header>
+<ul class="course-list">
+  <li ng-repeat="course in courses">
+    <a ng-href="{{course.href}}" class="with-abbr">
+      <abbr title="{{course.label}}" class="abbr">{{course.abbr}}</abbr>
+      {{course.label}}
+      <span><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </li>
 </ul>
