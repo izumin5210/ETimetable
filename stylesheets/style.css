@@ -485,7 +485,7 @@ body {
 .tab-wday li {
   color: #666666;
   list-style: none;
-  width: 18%;
+  width: 18.4%;
   height: 32px;
   line-height: 32px;
   margin: 0 1%;
@@ -510,30 +510,54 @@ body {
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
 /* line 151, ../src/sass/style.scss */
+.tab-wday li:first-child {
+  margin-left: 0;
+}
+/* line 153, ../src/sass/style.scss */
+.tab-wday li:first-child:hover, .tab-wday li:first-child:active {
+  margin-left: 1%;
+}
+/* line 154, ../src/sass/style.scss */
+.tab-wday li:first-child.active:hover, .tab-wday li:first-child.active:active {
+  margin-left: 0;
+}
+/* line 156, ../src/sass/style.scss */
+.tab-wday li:last-child {
+  margin-right: 0;
+}
+/* line 158, ../src/sass/style.scss */
+.tab-wday li:last-child:hover, .tab-wday li:last-child:active {
+  margin-right: 1%;
+}
+/* line 159, ../src/sass/style.scss */
+.tab-wday li:last-child.active:hover, .tab-wday li:last-child.active:active {
+  margin-right: 0;
+}
+/* line 161, ../src/sass/style.scss */
 .tab-wday li a {
   display: block;
   color: #666666;
   text-decoration: none;
 }
-/* line 155, ../src/sass/style.scss */
+/* line 165, ../src/sass/style.scss */
 .tab-wday li a[disabled=disabled] {
   cursor: default;
 }
-/* line 157, ../src/sass/style.scss */
+/* line 167, ../src/sass/style.scss */
 .tab-wday li.active {
   background-color: #ccc;
 }
-/* line 159, ../src/sass/style.scss */
+/* line 169, ../src/sass/style.scss */
 .tab-wday li.active:hover, .tab-wday li.active:active {
   height: 32px;
   line-height: 32px;
-  width: 18%;
+  width: 18.4%;
   margin: 0 1%;
 }
-/* line 166, ../src/sass/style.scss */
+/* line 176, ../src/sass/style.scss */
 .tab-wday li:hover, .tab-wday li:active {
   height: 28px;
   line-height: 28px;
-  width: 16%;
+  width: 16.4%;
   margin: 0 2%;
 }

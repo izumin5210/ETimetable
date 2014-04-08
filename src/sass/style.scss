@@ -12,9 +12,9 @@ $card-item-icon-size: $card-item-height - $card-item-padding * 2;
 
 $nav-btn-height: 32px;
 $nav-btn-height-stretch: 2px;
-$nav-btn-width: 18%;
+$nav-btn-width: 18.4%;
 $nav-btn-width-stretch: 1%;
-$nav-btn-width-margin: 1%;
+$nav-btn-width-margin: (100% - $nav-btn-width * 5)/8;
 
 $color-m: rgba(153, 0, 0, 0.5);
 $color-e: rgba(204, 153, 0, 0.5);
@@ -148,6 +148,16 @@ body {
     @include border-radius(3px);
     @include box-sizing(border-box);
     @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+    &:first-child {
+      margin-left: 0;
+      &:hover, &:active { margin-left: $nav-btn-width-stretch; }
+      &.active { &:hover, &:active { margin-left: 0; } }
+    }
+    &:last-child {
+      margin-right: 0;
+      &:hover, &:active { margin-right: $nav-btn-width-stretch; }
+      &.active { &:hover, &:active { margin-right: 0; } }
+    }
     a {
       display: block;
       @include link-colors($text-color);
