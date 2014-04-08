@@ -28,9 +28,12 @@
     }).when('/:grade/:department/:course/timetables', {
       templateUrl: '/templates/timetables.html',
       controller: 'TimetablesCtrl'
-    }).when('/:grade/:department/:course/timetables/:id', {
-      templateUrl: '/templates/lectures.html',
-      controller: 'LecturesCtrl'
+    }).when('/:grade/:department/timetables/:wday', {
+      templateUrl: '/templates/timetables.html',
+      controller: 'TimetablesCtrl'
+    }).when('/:grade/:department/:course/timetables/:wday', {
+      templateUrl: '/templates/timetables.html',
+      controller: 'TimetablesCtrl'
     }).otherwise({
       redirectTo: '/grades'
     });

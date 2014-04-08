@@ -47,7 +47,7 @@ body {
   height: 48px;
   line-height: 1.8em;
   text-align: center;
-  font-size: 70%;
+  font-size: 80%;
   color: $text-color;
   a { @include link-colors($text-color, $base-color, $base-color, $text-color, $base-color); }
   border-top: 1px solid #ccc;
@@ -89,7 +89,7 @@ body {
       background: #999;
       color: #fff;
       text-transform: uppercase;
-      font-size: 60%;
+      font-size: 75%;
       @include border-radius(3px);
       &.abbr-m { background-color: $color-m;}
       &.abbr-e { background-color: $color-e;}
@@ -136,9 +136,6 @@ body {
 .tab-wday {
   margin: $card-item-margin;
   li {
-    a{
-      display: block;
-    }
     color: $text-color;
     list-style: none;
     width: $nav-btn-width;
@@ -151,6 +148,12 @@ body {
     @include border-radius(3px);
     @include box-sizing(border-box);
     @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+    a {
+      display: block;
+      @include link-colors($text-color);
+      text-decoration: none;
+      &[disabled=disabled] { cursor: default; }
+    }
     &.active {
       background-color: #ccc;
       &:hover, &:active {

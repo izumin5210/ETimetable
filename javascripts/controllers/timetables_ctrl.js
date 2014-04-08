@@ -18,6 +18,7 @@
       me: 3,
       ac: 4
     };
+    $scope.currentWday = Math.min(Math.max($routeParams.wday || new Date().getDay(), 0), 5);
     $scope.wdayJa = ['日', '月', '火', '水', '木', '金', '土'];
     $scope.timetables = {};
     $scope.grade = $routeParams.grade;
@@ -29,10 +30,19 @@
       abbr: $routeParams.course,
       id: courseIds[$routeParams.course]
     };
+    $scope.href = function(wday) {
+      if ($scope.course.abbr != null) {
+        return "#/" + $scope.grade + "/" + $scope.department.abbr + "/" + $scope.course.abbr + "/timetables/" + wday;
+      } else {
+        return "#/" + $scope.grade + "/" + $scope.department.abbr + "/timetables/" + wday;
+      }
+    };
     if ($scope.department.id === 5) {
       $scope.class_ = ("" + $scope.grade + $scope.course.abbr).toUpperCase();
-    } else {
+    } else if ($scope.course.abbr != null) {
       $scope.class_ = ("" + $scope.grade + $scope.department.abbr + $scope.course.abbr).toUpperCase();
+    } else {
+      $scope.class_ = ("" + $scope.grade + $scope.department.abbr).toUpperCase();
     }
     params = angular.extend({}, {
       grade: $scope.grade,

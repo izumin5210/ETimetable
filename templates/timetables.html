@@ -2,14 +2,13 @@
   <p>{{class_}}</p>
 </header>
 
-<!-- TODO: directive化，ルーティング追加 -->
 <ul class="tab-wday tab-timetable">
-  <li ng-repeat="wday in [1, 2, 3, 4, 5]">
-    <a>{{wdayJa[wday]}}</a>
+  <li ng-repeat="wday in [1, 2, 3, 4, 5]" ng-class="{active: currentWday==wday}">
+    <a ng-href="{{href(wday)}}" ng-disabled="{{currentWday==wday}}">{{wdayJa[wday]}}</a>
   </li>
 </ul>
 
-<ul ng-repeat="wday in [1, 2, 3, 4, 5]" class="timetable-list" id="wday-{{wday}}">
+<ul ng-repeat="wday in [1, 2, 3, 4, 5]" class="timetable-list" ng-class="{active: currentWday==wday}">
   <li ng-repeat="period in [1, 2, 3, 4]">
     <a class="with-abbr">
       <span class="abbr abbr-{{department.abbr}}">{{period}}</span>
