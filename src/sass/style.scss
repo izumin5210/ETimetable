@@ -1,2 +1,68 @@
 @import 'compass';
 @import 'compass/reset';
+
+$text-color: #666;
+$bg-color: #eee;
+$base-color: #e67e22;
+$card-item-height: 64px;
+$card-item-margin: 8px;
+$card-item-stretch: 4px;
+$card-item-padding: 16px;
+
+body {
+  background-color: $bg-color;
+}
+
+.container {
+  height: 100%;
+}
+
+.header {
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  background-color: $base-color;
+  p { text-align: center; }
+}
+
+.footer {
+  height: 48px;
+  line-height: 1.8em;
+  text-align: center;
+  font-size: 70%;
+  color: $text-color;
+  a { @include link-colors($text-color, $base-color, $base-color, $text-color, $base-color); }
+  border-top: 1px solid #ccc;
+  padding-top: $card-item-margin;
+  margin: 0 $card-item-margin;
+}
+
+.grade-list {
+  padding: 8px 0;
+  li {
+    height: $card-item-height;
+    line-height: $card-item-height;
+    margin: $card-item-margin;
+    background: #fff;
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+    a {
+      position: relative;
+      display: block;
+      list-style: none;
+      padding: 0 $card-item-padding;
+      text-decoration: none;
+      @include link-colors($text-color);
+      span {
+        position: absolute;
+        right: $card-item-padding;
+      }
+    }
+    &:hover, &:active {
+      height: $card-item-height - $card-item-stretch * 2;
+      line-height: $card-item-height - $card-item-stretch * 2;
+      margin: $card-item-margin + $card-item-stretch;
+    }
+  }
+}

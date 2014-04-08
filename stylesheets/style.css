@@ -62,3 +62,100 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* line 12, ../src/sass/style.scss */
+body {
+  background-color: #eeeeee;
+}
+
+/* line 16, ../src/sass/style.scss */
+.container {
+  height: 100%;
+}
+
+/* line 20, ../src/sass/style.scss */
+.header {
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  background-color: #e67e22;
+}
+/* line 25, ../src/sass/style.scss */
+.header p {
+  text-align: center;
+}
+
+/* line 28, ../src/sass/style.scss */
+.footer {
+  height: 48px;
+  line-height: 1.8em;
+  text-align: center;
+  font-size: 70%;
+  color: #666666;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  margin: 0 8px;
+}
+/* line 34, ../src/sass/style.scss */
+.footer a {
+  color: #666666;
+}
+/* line 18, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.footer a:visited {
+  color: #666666;
+}
+/* line 21, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.footer a:focus {
+  color: #e67e22;
+}
+/* line 24, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.footer a:hover {
+  color: #e67e22;
+}
+/* line 27, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.footer a:active {
+  color: #e67e22;
+}
+
+/* line 40, ../src/sass/style.scss */
+.grade-list {
+  padding: 8px 0;
+}
+/* line 42, ../src/sass/style.scss */
+.grade-list li {
+  height: 64px;
+  line-height: 64px;
+  margin: 8px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+}
+/* line 50, ../src/sass/style.scss */
+.grade-list li a {
+  position: relative;
+  display: block;
+  list-style: none;
+  padding: 0 16px;
+  text-decoration: none;
+  color: #666666;
+}
+/* line 57, ../src/sass/style.scss */
+.grade-list li a span {
+  position: absolute;
+  right: 16px;
+}
+/* line 62, ../src/sass/style.scss */
+.grade-list li:hover, .grade-list li:active {
+  height: 56px;
+  line-height: 56px;
+  margin: 12px;
+}
