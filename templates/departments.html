@@ -1,4 +1,12 @@
-<p>学科を選択してください</p>
-<ul>
-  <li ng-repeat="department in departments"><a ng-href="{{department.href}}">{{department.label}}</a></li>
+<header class="header">
+  <p>学科を選択してください</p>
+</header>
+<ul class="department-list">
+  <li ng-repeat="department in departments">
+    <a ng-href="{{department.href}}" class="with-abbr">
+      <abbr title="{{department.label}}" class="abbr abbr-{{department.abbr}}">{{department.abbr}}</abbr>
+      {{department.label}}
+      <span><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </li>
 </ul>
