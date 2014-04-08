@@ -1,4 +1,18 @@
 <h1>timetable</h1>
-<ul>
-  <li ng-repeat="timetable in timetables">{{timetable.title}}</li>
-</ul>
+
+<table border=1>
+  <tr>
+    <th></th>
+    <th>m</th>
+    <th>t</th>
+    <th>w</th>
+    <th>t</th>
+    <th>f</th>
+  </tr>
+  <tr ng-repeat="period in [1, 2, 3, 4]">
+    <th>{{period}}</th>
+    <td ng-repeat="wday in [1, 2, 3, 4, 5]">
+      {{timetables[wday][period].title}}
+    </td>
+  </tr>
+</table>

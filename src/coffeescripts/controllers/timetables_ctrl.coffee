@@ -6,6 +6,7 @@ app.controller 'TimetablesCtrl',
     departmentIds = {m: 1, e: 2, c: 3, a: 4, adv: 5}
     courseIds = {d: 1, j: 2, me: 3, ac: 4}
 
+    $scope.timetables = {}
     $scope.grade = $routeParams.grade
     $scope.department =
       abbr: $routeParams.grade
@@ -19,5 +20,8 @@ app.controller 'TimetablesCtrl',
 
 
     $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
-      .success (data) -> $scope.timetables = data
+      .success (data) ->
+        angular.forEach data, (t) ->
+          $scope.timetables[t.wday] = {} unless $scope.timetables[t.wday]?
+          $scope.timetables[t.wday][t.period] = t
 

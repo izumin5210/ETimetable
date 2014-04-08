@@ -18,6 +18,7 @@
       me: 3,
       ac: 4
     };
+    $scope.timetables = {};
     $scope.grade = $routeParams.grade;
     $scope.department = {
       abbr: $routeParams.grade,
@@ -36,7 +37,12 @@
     return $http.jsonp("" + config.apiEndpoint + "/timetables", {
       params: params
     }).success(function(data) {
-      return $scope.timetables = data;
+      return angular.forEach(data, function(t) {
+        if ($scope.timetables[t.wday] == null) {
+          $scope.timetables[t.wday] = {};
+        }
+        return $scope.timetables[t.wday][t.period] = t;
+      });
     });
   });
 
