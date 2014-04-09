@@ -36,8 +36,8 @@ app.config ($routeProvider, $locationProvider) ->
     .when '/:grade/:department/:course/timetables/:wday',
       templateUrl: '/templates/timetables.html'
       controller: 'TimetablesCtrl'
-    # .when '/:grade/:department/:course/timetables/:id',
-      # templateUrl: '/templates/lectures.html'
-      # controller: 'LecturesCtrl'
+    .when '/lectures/:id',
+      templateUrl: '/templates/lectures.html'
+      controller: 'LecturesCtrl'
     .otherwise
       redirectTo: '/grades'

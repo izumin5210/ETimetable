@@ -55,19 +55,48 @@ body {
   margin: 0 $card-item-margin;
 }
 
-@mixin card-list-item {
-  height: $card-item-height;
-  line-height: $card-item-height;
+@mixin card-section {
+  line-height: 1.4em;
   margin: $card-item-margin;
+  padding: $card-item-padding;
+  color: $text-color;
   background: #fff;
+  font-size: 80%;
   @include box-sizing(border-box);
   @include border-radius(3px);
   @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+  h1 {
+    font-size: 120%;
+    margin-bottom: 12px;
+  }
+  h2 {
+    margin-top: 12px;
+    padding-left: 4px;
+    border-bottom: 1px solid #ccc;
+    border-left: 4px solid #ccc;
+  }
+  p, ul {
+    padding: 8px;
+  }
+  .slash-delimited-list {
+    /* @include delimited-list(' / '); */
+    @include inline-block-list;
+    li {
+      &:after { content: ' / '; }
+      &:last-child { &:after { content: ''; } }
+    }
+  }
+}
+
+@mixin card-list-item {
+  @include card-section;
+  height: $card-item-height;
+  line-height: $card-item-height;
+  padding: 0 $card-item-padding;
   a {
     position: relative;
     display: block;
     list-style: none;
-    padding: 0 $card-item-padding;
     text-decoration: none;
     @include link-colors($text-color);
     span {
@@ -75,11 +104,11 @@ body {
       right: $card-item-padding;
     }
     &.with-abbr {
-      padding-left: $card-item-padding * 2 + $card-item-icon-size;
+      padding-left: $card-item-padding + $card-item-icon-size;
     }
     .abbr {
       position: absolute;
-      left: $card-item-padding;
+      left: 0px;
       top: $card-item-padding;
       display: inline-block;
       width: $card-item-icon-size;
@@ -113,17 +142,10 @@ body {
   }
 }
 
-.grade-list {
-  @include card-list;
-}
-
-.department-list {
-  @include card-list;
-}
-
-.course-list {
-  @include card-list;
-}
+.grade-list { @include card-list; }
+.department-list { @include card-list; }
+.course-list { @include card-list; }
+.lecture-card { @include card-section; }
 
 .timetable-list {
   @include card-list;

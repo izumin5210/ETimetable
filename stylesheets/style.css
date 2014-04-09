@@ -137,12 +137,14 @@ body {
   color: #e67e22;
 }
 
-/* line 111, ../src/sass/style.scss */
+/* line 140, ../src/sass/style.scss */
 .grade-list li {
-  height: 64px;
-  line-height: 64px;
+  line-height: 1.4em;
   margin: 8px;
+  padding: 16px;
+  color: #666666;
   background: #fff;
+  font-size: 80%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -154,29 +156,77 @@ body {
   -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
 }
-/* line 66, ../src/sass/style.scss */
+/* line 68, ../src/sass/style.scss */
+.grade-list li h1 {
+  font-size: 120%;
+  margin-bottom: 12px;
+}
+/* line 72, ../src/sass/style.scss */
+.grade-list li h2 {
+  margin-top: 12px;
+  padding-left: 4px;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+/* line 78, ../src/sass/style.scss */
+.grade-list li p, .grade-list li ul {
+  padding: 8px;
+}
+/* line 81, ../src/sass/style.scss */
+.grade-list li .slash-delimited-list {
+  /* @include delimited-list(' / '); */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+.grade-list li .slash-delimited-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 85, ../src/sass/style.scss */
+.grade-list li .slash-delimited-list li:after {
+  content: ' / ';
+}
+/* line 86, ../src/sass/style.scss */
+.grade-list li .slash-delimited-list li:last-child:after {
+  content: '';
+}
+/* line 96, ../src/sass/style.scss */
 .grade-list li a {
   position: relative;
   display: block;
   list-style: none;
-  padding: 0 16px;
   text-decoration: none;
   color: #666666;
 }
-/* line 73, ../src/sass/style.scss */
+/* line 102, ../src/sass/style.scss */
 .grade-list li a span {
   position: absolute;
   right: 16px;
 }
-/* line 77, ../src/sass/style.scss */
+/* line 106, ../src/sass/style.scss */
 .grade-list li a.with-abbr {
-  padding-left: 64px;
+  padding-left: 48px;
 }
-/* line 80, ../src/sass/style.scss */
+/* line 109, ../src/sass/style.scss */
 .grade-list li a .abbr {
   position: absolute;
-  left: 16px;
+  left: 0px;
   top: 16px;
   display: inline-block;
   width: 32px;
@@ -193,39 +243,41 @@ body {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 94, ../src/sass/style.scss */
+/* line 123, ../src/sass/style.scss */
 .grade-list li a .abbr.abbr-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 95, ../src/sass/style.scss */
+/* line 124, ../src/sass/style.scss */
 .grade-list li a .abbr.abbr-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 96, ../src/sass/style.scss */
+/* line 125, ../src/sass/style.scss */
 .grade-list li a .abbr.abbr-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 97, ../src/sass/style.scss */
+/* line 126, ../src/sass/style.scss */
 .grade-list li a .abbr.abbr-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 100, ../src/sass/style.scss */
+/* line 129, ../src/sass/style.scss */
 .grade-list li:hover, .grade-list li:active {
   height: 56px;
   line-height: 56px;
   margin: 12px;
 }
-/* line 104, ../src/sass/style.scss */
+/* line 133, ../src/sass/style.scss */
 .grade-list li:hover .abbr, .grade-list li:active .abbr {
   top: 12px;
 }
 
-/* line 111, ../src/sass/style.scss */
+/* line 140, ../src/sass/style.scss */
 .department-list li {
-  height: 64px;
-  line-height: 64px;
+  line-height: 1.4em;
   margin: 8px;
+  padding: 16px;
+  color: #666666;
   background: #fff;
+  font-size: 80%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -237,29 +289,77 @@ body {
   -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
 }
-/* line 66, ../src/sass/style.scss */
+/* line 68, ../src/sass/style.scss */
+.department-list li h1 {
+  font-size: 120%;
+  margin-bottom: 12px;
+}
+/* line 72, ../src/sass/style.scss */
+.department-list li h2 {
+  margin-top: 12px;
+  padding-left: 4px;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+/* line 78, ../src/sass/style.scss */
+.department-list li p, .department-list li ul {
+  padding: 8px;
+}
+/* line 81, ../src/sass/style.scss */
+.department-list li .slash-delimited-list {
+  /* @include delimited-list(' / '); */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+.department-list li .slash-delimited-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 85, ../src/sass/style.scss */
+.department-list li .slash-delimited-list li:after {
+  content: ' / ';
+}
+/* line 86, ../src/sass/style.scss */
+.department-list li .slash-delimited-list li:last-child:after {
+  content: '';
+}
+/* line 96, ../src/sass/style.scss */
 .department-list li a {
   position: relative;
   display: block;
   list-style: none;
-  padding: 0 16px;
   text-decoration: none;
   color: #666666;
 }
-/* line 73, ../src/sass/style.scss */
+/* line 102, ../src/sass/style.scss */
 .department-list li a span {
   position: absolute;
   right: 16px;
 }
-/* line 77, ../src/sass/style.scss */
+/* line 106, ../src/sass/style.scss */
 .department-list li a.with-abbr {
-  padding-left: 64px;
+  padding-left: 48px;
 }
-/* line 80, ../src/sass/style.scss */
+/* line 109, ../src/sass/style.scss */
 .department-list li a .abbr {
   position: absolute;
-  left: 16px;
+  left: 0px;
   top: 16px;
   display: inline-block;
   width: 32px;
@@ -276,39 +376,41 @@ body {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 94, ../src/sass/style.scss */
+/* line 123, ../src/sass/style.scss */
 .department-list li a .abbr.abbr-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 95, ../src/sass/style.scss */
+/* line 124, ../src/sass/style.scss */
 .department-list li a .abbr.abbr-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 96, ../src/sass/style.scss */
+/* line 125, ../src/sass/style.scss */
 .department-list li a .abbr.abbr-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 97, ../src/sass/style.scss */
+/* line 126, ../src/sass/style.scss */
 .department-list li a .abbr.abbr-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 100, ../src/sass/style.scss */
+/* line 129, ../src/sass/style.scss */
 .department-list li:hover, .department-list li:active {
   height: 56px;
   line-height: 56px;
   margin: 12px;
 }
-/* line 104, ../src/sass/style.scss */
+/* line 133, ../src/sass/style.scss */
 .department-list li:hover .abbr, .department-list li:active .abbr {
   top: 12px;
 }
 
-/* line 111, ../src/sass/style.scss */
+/* line 140, ../src/sass/style.scss */
 .course-list li {
-  height: 64px;
-  line-height: 64px;
+  line-height: 1.4em;
   margin: 8px;
+  padding: 16px;
+  color: #666666;
   background: #fff;
+  font-size: 80%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -320,29 +422,77 @@ body {
   -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
 }
-/* line 66, ../src/sass/style.scss */
+/* line 68, ../src/sass/style.scss */
+.course-list li h1 {
+  font-size: 120%;
+  margin-bottom: 12px;
+}
+/* line 72, ../src/sass/style.scss */
+.course-list li h2 {
+  margin-top: 12px;
+  padding-left: 4px;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+/* line 78, ../src/sass/style.scss */
+.course-list li p, .course-list li ul {
+  padding: 8px;
+}
+/* line 81, ../src/sass/style.scss */
+.course-list li .slash-delimited-list {
+  /* @include delimited-list(' / '); */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+.course-list li .slash-delimited-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 85, ../src/sass/style.scss */
+.course-list li .slash-delimited-list li:after {
+  content: ' / ';
+}
+/* line 86, ../src/sass/style.scss */
+.course-list li .slash-delimited-list li:last-child:after {
+  content: '';
+}
+/* line 96, ../src/sass/style.scss */
 .course-list li a {
   position: relative;
   display: block;
   list-style: none;
-  padding: 0 16px;
   text-decoration: none;
   color: #666666;
 }
-/* line 73, ../src/sass/style.scss */
+/* line 102, ../src/sass/style.scss */
 .course-list li a span {
   position: absolute;
   right: 16px;
 }
-/* line 77, ../src/sass/style.scss */
+/* line 106, ../src/sass/style.scss */
 .course-list li a.with-abbr {
-  padding-left: 64px;
+  padding-left: 48px;
 }
-/* line 80, ../src/sass/style.scss */
+/* line 109, ../src/sass/style.scss */
 .course-list li a .abbr {
   position: absolute;
-  left: 16px;
+  left: 0px;
   top: 16px;
   display: inline-block;
   width: 32px;
@@ -359,43 +509,41 @@ body {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 94, ../src/sass/style.scss */
+/* line 123, ../src/sass/style.scss */
 .course-list li a .abbr.abbr-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 95, ../src/sass/style.scss */
+/* line 124, ../src/sass/style.scss */
 .course-list li a .abbr.abbr-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 96, ../src/sass/style.scss */
+/* line 125, ../src/sass/style.scss */
 .course-list li a .abbr.abbr-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 97, ../src/sass/style.scss */
+/* line 126, ../src/sass/style.scss */
 .course-list li a .abbr.abbr-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 100, ../src/sass/style.scss */
+/* line 129, ../src/sass/style.scss */
 .course-list li:hover, .course-list li:active {
   height: 56px;
   line-height: 56px;
   margin: 12px;
 }
-/* line 104, ../src/sass/style.scss */
+/* line 133, ../src/sass/style.scss */
 .course-list li:hover .abbr, .course-list li:active .abbr {
   top: 12px;
 }
 
-/* line 128, ../src/sass/style.scss */
-.timetable-list {
-  display: none;
-}
-/* line 111, ../src/sass/style.scss */
-.timetable-list li {
-  height: 64px;
-  line-height: 64px;
+/* line 148, ../src/sass/style.scss */
+.lecture-card {
+  line-height: 1.4em;
   margin: 8px;
+  padding: 16px;
+  color: #666666;
   background: #fff;
+  font-size: 80%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -408,28 +556,147 @@ body {
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 66, ../src/sass/style.scss */
+/* line 68, ../src/sass/style.scss */
+.lecture-card h1 {
+  font-size: 120%;
+  margin-bottom: 12px;
+}
+/* line 72, ../src/sass/style.scss */
+.lecture-card h2 {
+  margin-top: 12px;
+  padding-left: 4px;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+/* line 78, ../src/sass/style.scss */
+.lecture-card p, .lecture-card ul {
+  padding: 8px;
+}
+/* line 81, ../src/sass/style.scss */
+.lecture-card .slash-delimited-list {
+  /* @include delimited-list(' / '); */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+.lecture-card .slash-delimited-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 85, ../src/sass/style.scss */
+.lecture-card .slash-delimited-list li:after {
+  content: ' / ';
+}
+/* line 86, ../src/sass/style.scss */
+.lecture-card .slash-delimited-list li:last-child:after {
+  content: '';
+}
+
+/* line 150, ../src/sass/style.scss */
+.timetable-list {
+  display: none;
+}
+/* line 140, ../src/sass/style.scss */
+.timetable-list li {
+  line-height: 1.4em;
+  margin: 8px;
+  padding: 16px;
+  color: #666666;
+  background: #fff;
+  font-size: 80%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 16px;
+}
+/* line 68, ../src/sass/style.scss */
+.timetable-list li h1 {
+  font-size: 120%;
+  margin-bottom: 12px;
+}
+/* line 72, ../src/sass/style.scss */
+.timetable-list li h2 {
+  margin-top: 12px;
+  padding-left: 4px;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+/* line 78, ../src/sass/style.scss */
+.timetable-list li p, .timetable-list li ul {
+  padding: 8px;
+}
+/* line 81, ../src/sass/style.scss */
+.timetable-list li .slash-delimited-list {
+  /* @include delimited-list(' / '); */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
+.timetable-list li .slash-delimited-list li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+/* line 85, ../src/sass/style.scss */
+.timetable-list li .slash-delimited-list li:after {
+  content: ' / ';
+}
+/* line 86, ../src/sass/style.scss */
+.timetable-list li .slash-delimited-list li:last-child:after {
+  content: '';
+}
+/* line 96, ../src/sass/style.scss */
 .timetable-list li a {
   position: relative;
   display: block;
   list-style: none;
-  padding: 0 16px;
   text-decoration: none;
   color: #666666;
 }
-/* line 73, ../src/sass/style.scss */
+/* line 102, ../src/sass/style.scss */
 .timetable-list li a span {
   position: absolute;
   right: 16px;
 }
-/* line 77, ../src/sass/style.scss */
+/* line 106, ../src/sass/style.scss */
 .timetable-list li a.with-abbr {
-  padding-left: 64px;
+  padding-left: 48px;
 }
-/* line 80, ../src/sass/style.scss */
+/* line 109, ../src/sass/style.scss */
 .timetable-list li a .abbr {
   position: absolute;
-  left: 16px;
+  left: 0px;
   top: 16px;
   display: inline-block;
   width: 32px;
@@ -446,42 +713,42 @@ body {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 94, ../src/sass/style.scss */
+/* line 123, ../src/sass/style.scss */
 .timetable-list li a .abbr.abbr-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 95, ../src/sass/style.scss */
+/* line 124, ../src/sass/style.scss */
 .timetable-list li a .abbr.abbr-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 96, ../src/sass/style.scss */
+/* line 125, ../src/sass/style.scss */
 .timetable-list li a .abbr.abbr-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 97, ../src/sass/style.scss */
+/* line 126, ../src/sass/style.scss */
 .timetable-list li a .abbr.abbr-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 100, ../src/sass/style.scss */
+/* line 129, ../src/sass/style.scss */
 .timetable-list li:hover, .timetable-list li:active {
   height: 56px;
   line-height: 56px;
   margin: 12px;
 }
-/* line 104, ../src/sass/style.scss */
+/* line 133, ../src/sass/style.scss */
 .timetable-list li:hover .abbr, .timetable-list li:active .abbr {
   top: 12px;
 }
-/* line 131, ../src/sass/style.scss */
+/* line 153, ../src/sass/style.scss */
 .timetable-list.active {
   display: block;
 }
 
-/* line 136, ../src/sass/style.scss */
+/* line 158, ../src/sass/style.scss */
 .tab-wday {
   margin: 8px;
 }
-/* line 138, ../src/sass/style.scss */
+/* line 160, ../src/sass/style.scss */
 .tab-wday li {
   color: #666666;
   list-style: none;
@@ -509,52 +776,52 @@ body {
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 151, ../src/sass/style.scss */
+/* line 173, ../src/sass/style.scss */
 .tab-wday li:first-child {
   margin-left: 0;
 }
-/* line 153, ../src/sass/style.scss */
+/* line 175, ../src/sass/style.scss */
 .tab-wday li:first-child:hover, .tab-wday li:first-child:active {
   margin-left: 1%;
 }
-/* line 154, ../src/sass/style.scss */
+/* line 176, ../src/sass/style.scss */
 .tab-wday li:first-child.active:hover, .tab-wday li:first-child.active:active {
   margin-left: 0;
 }
-/* line 156, ../src/sass/style.scss */
+/* line 178, ../src/sass/style.scss */
 .tab-wday li:last-child {
   margin-right: 0;
 }
-/* line 158, ../src/sass/style.scss */
+/* line 180, ../src/sass/style.scss */
 .tab-wday li:last-child:hover, .tab-wday li:last-child:active {
   margin-right: 1%;
 }
-/* line 159, ../src/sass/style.scss */
+/* line 181, ../src/sass/style.scss */
 .tab-wday li:last-child.active:hover, .tab-wday li:last-child.active:active {
   margin-right: 0;
 }
-/* line 161, ../src/sass/style.scss */
+/* line 183, ../src/sass/style.scss */
 .tab-wday li a {
   display: block;
   color: #666666;
   text-decoration: none;
 }
-/* line 165, ../src/sass/style.scss */
+/* line 187, ../src/sass/style.scss */
 .tab-wday li a[disabled=disabled] {
   cursor: default;
 }
-/* line 167, ../src/sass/style.scss */
+/* line 189, ../src/sass/style.scss */
 .tab-wday li.active {
   background-color: #ccc;
 }
-/* line 169, ../src/sass/style.scss */
+/* line 191, ../src/sass/style.scss */
 .tab-wday li.active:hover, .tab-wday li.active:active {
   height: 32px;
   line-height: 32px;
   width: 18.4%;
   margin: 0 1%;
 }
-/* line 176, ../src/sass/style.scss */
+/* line 198, ../src/sass/style.scss */
 .tab-wday li:hover, .tab-wday li:active {
   height: 28px;
   line-height: 28px;

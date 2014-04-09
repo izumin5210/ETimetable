@@ -10,7 +10,7 @@
 
 <ul ng-repeat="wday in [1, 2, 3, 4, 5]" class="timetable-list" ng-class="{active: currentWday==wday}">
   <li ng-repeat="period in [1, 2, 3, 4]">
-    <a class="with-abbr">
+    <a ng-href="#/lectures/{{timetables[wday][period].lectureId}}" class="with-abbr">
       <span class="abbr abbr-{{department.abbr}}">{{period}}</span>
       {{timetables[wday][period].title}}
       <span><i class="fa fa-chevron-right"></i></span>

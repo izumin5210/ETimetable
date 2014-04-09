@@ -1,0 +1,33 @@
+<header class="header header-{{department.abbr}}">
+  <p>{{class_}}</p>
+</header>
+
+<section class="lecture-card">
+  <h1>{{lecture.title}}</h1>
+  <ul class="slash-delimited-list" ng-repeat="lecturer in lecture.lecturers">
+    <li>{{lecturer.name}}</li>
+  </ul>
+  <ul class="slash-delimited-list">
+    <li>{{lecture.term}}</li>
+    <li>{{lecture.divide}}</li>
+    <li>{{lecture.requiredSelective}}</li>
+    <li>{{lecture.credit}}単位</li>
+  </ul>
+  <h2>単位を落とすには</h2>
+  <p>{{lecture.failureAbsence}}</p>
+  <h2>評価</h2>
+  <p>{{lecture.evaluation}}</p>
+  <h2>概要</h2>
+  <p>{{lecture.abstract}}</p>
+  <h2>テキスト（参考文献）</h2>
+  <p>{{lecture.textbooks}}</p>
+  <h2>連絡先</h2>
+  <ul>
+    <li ng-repeat="contact in lecture.contacts">{{contact.email}}</li>
+  </ul>
+</section>
+
+<section class="lecture-card" ng-repeat="plan in lecture.plans">
+  <h1>#{{plan.number}} {{plan.title}}</h1>
+  <p>{{plan.detail}}</p>
+</section>
