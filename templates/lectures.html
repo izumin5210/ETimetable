@@ -4,14 +4,11 @@
 
 <section class="lecture-card">
   <h1>{{lecture.title}}</h1>
-  <ul class="slash-delimited-list" ng-repeat="lecturer in lecture.lecturers">
-    <li>{{lecturer.name}}</li>
+  <ul class="slash-delimited-list">
+    <li ng-repeat="lecturer in lecture.lecturers">{{lecturer.name}}</li>
   </ul>
   <ul class="slash-delimited-list">
-    <li>{{lecture.term}}</li>
-    <li>{{lecture.divide}}</li>
-    <li>{{lecture.requiredSelective}}</li>
-    <li>{{lecture.credit}}単位</li>
+    <li>{{lecture.term}}</li><li>{{lecture.divide}}</li><li>{{lecture.requiredSelective}}</li><li>{{lecture.credit}}単位</li>
   </ul>
   <h2>単位を落とすには</h2>
   <p>{{lecture.failureAbsence}}</p>
@@ -27,7 +24,7 @@
   </ul>
 </section>
 
-<section class="lecture-card" ng-repeat="plan in lecture.plans">
+<section class="lecture-card" ng-repeat="plan in lecture.plans | orderBy:'number'">
   <h1>#{{plan.number}} {{plan.title}}</h1>
   <p>{{plan.detail}}</p>
 </section>

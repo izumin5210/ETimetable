@@ -35,6 +35,7 @@ body {
   line-height: 48px;
   color: #fff;
   background-color: $base-color;
+  @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
   p { text-align: center; }
   &.header-m { background-color: $color-m; }
   &.header-e { background-color: $color-e; }
@@ -71,9 +72,8 @@ body {
   }
   h2 {
     margin-top: 12px;
-    padding-left: 4px;
     border-bottom: 1px solid #ccc;
-    border-left: 4px solid #ccc;
+    &:before { content: '＊ '; }
   }
   p, ul {
     padding: 8px;
@@ -82,7 +82,7 @@ body {
     /* @include delimited-list(' / '); */
     @include inline-block-list;
     li {
-      &:after { content: ' / '; }
+      &:after { content: '/'; padding: 0 .3em; }
       &:last-child { &:after { content: ''; } }
     }
   }

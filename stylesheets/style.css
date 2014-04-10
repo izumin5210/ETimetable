@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 17, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -79,33 +80,36 @@ body {
   line-height: 48px;
   color: #fff;
   background-color: #e67e22;
+  -webkit-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
+  box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 38, ../src/sass/style.scss */
+/* line 39, ../src/sass/style.scss */
 .header p {
   text-align: center;
 }
-/* line 39, ../src/sass/style.scss */
+/* line 40, ../src/sass/style.scss */
 .header.header-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 40, ../src/sass/style.scss */
+/* line 41, ../src/sass/style.scss */
 .header.header-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 41, ../src/sass/style.scss */
+/* line 42, ../src/sass/style.scss */
 .header.header-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 42, ../src/sass/style.scss */
+/* line 43, ../src/sass/style.scss */
 .header.header-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 43, ../src/sass/style.scss */
+/* line 44, ../src/sass/style.scss */
 .header.header-adv {
   background-color: rgba(51, 51, 51, 0.5);
 }
 
-/* line 46, ../src/sass/style.scss */
+/* line 47, ../src/sass/style.scss */
 .footer {
   height: 48px;
   line-height: 1.8em;
@@ -116,7 +120,7 @@ body {
   padding-top: 8px;
   margin: 0 8px;
 }
-/* line 52, ../src/sass/style.scss */
+/* line 53, ../src/sass/style.scss */
 .footer a {
   color: #666666;
 }
@@ -160,17 +164,19 @@ body {
   line-height: 64px;
   padding: 0 16px;
 }
-/* line 68, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 .grade-list li h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
-/* line 72, ../src/sass/style.scss */
+/* line 73, ../src/sass/style.scss */
 .grade-list li h2 {
   margin-top: 12px;
-  padding-left: 4px;
   border-bottom: 1px solid #ccc;
-  border-left: 4px solid #ccc;
+}
+/* line 76, ../src/sass/style.scss */
+.grade-list li h2:before {
+  content: '＊ ';
 }
 /* line 78, ../src/sass/style.scss */
 .grade-list li p, .grade-list li ul {
@@ -200,7 +206,8 @@ body {
 }
 /* line 85, ../src/sass/style.scss */
 .grade-list li .slash-delimited-list li:after {
-  content: ' / ';
+  content: '/';
+  padding: 0 .3em;
 }
 /* line 86, ../src/sass/style.scss */
 .grade-list li .slash-delimited-list li:last-child:after {
@@ -293,17 +300,19 @@ body {
   line-height: 64px;
   padding: 0 16px;
 }
-/* line 68, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 .department-list li h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
-/* line 72, ../src/sass/style.scss */
+/* line 73, ../src/sass/style.scss */
 .department-list li h2 {
   margin-top: 12px;
-  padding-left: 4px;
   border-bottom: 1px solid #ccc;
-  border-left: 4px solid #ccc;
+}
+/* line 76, ../src/sass/style.scss */
+.department-list li h2:before {
+  content: '＊ ';
 }
 /* line 78, ../src/sass/style.scss */
 .department-list li p, .department-list li ul {
@@ -333,7 +342,8 @@ body {
 }
 /* line 85, ../src/sass/style.scss */
 .department-list li .slash-delimited-list li:after {
-  content: ' / ';
+  content: '/';
+  padding: 0 .3em;
 }
 /* line 86, ../src/sass/style.scss */
 .department-list li .slash-delimited-list li:last-child:after {
@@ -426,17 +436,19 @@ body {
   line-height: 64px;
   padding: 0 16px;
 }
-/* line 68, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 .course-list li h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
-/* line 72, ../src/sass/style.scss */
+/* line 73, ../src/sass/style.scss */
 .course-list li h2 {
   margin-top: 12px;
-  padding-left: 4px;
   border-bottom: 1px solid #ccc;
-  border-left: 4px solid #ccc;
+}
+/* line 76, ../src/sass/style.scss */
+.course-list li h2:before {
+  content: '＊ ';
 }
 /* line 78, ../src/sass/style.scss */
 .course-list li p, .course-list li ul {
@@ -466,7 +478,8 @@ body {
 }
 /* line 85, ../src/sass/style.scss */
 .course-list li .slash-delimited-list li:after {
-  content: ' / ';
+  content: '/';
+  padding: 0 .3em;
 }
 /* line 86, ../src/sass/style.scss */
 .course-list li .slash-delimited-list li:last-child:after {
@@ -556,17 +569,19 @@ body {
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 68, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 .lecture-card h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
-/* line 72, ../src/sass/style.scss */
+/* line 73, ../src/sass/style.scss */
 .lecture-card h2 {
   margin-top: 12px;
-  padding-left: 4px;
   border-bottom: 1px solid #ccc;
-  border-left: 4px solid #ccc;
+}
+/* line 76, ../src/sass/style.scss */
+.lecture-card h2:before {
+  content: '＊ ';
 }
 /* line 78, ../src/sass/style.scss */
 .lecture-card p, .lecture-card ul {
@@ -596,7 +611,8 @@ body {
 }
 /* line 85, ../src/sass/style.scss */
 .lecture-card .slash-delimited-list li:after {
-  content: ' / ';
+  content: '/';
+  padding: 0 .3em;
 }
 /* line 86, ../src/sass/style.scss */
 .lecture-card .slash-delimited-list li:last-child:after {
@@ -630,17 +646,19 @@ body {
   line-height: 64px;
   padding: 0 16px;
 }
-/* line 68, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 .timetable-list li h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
-/* line 72, ../src/sass/style.scss */
+/* line 73, ../src/sass/style.scss */
 .timetable-list li h2 {
   margin-top: 12px;
-  padding-left: 4px;
   border-bottom: 1px solid #ccc;
-  border-left: 4px solid #ccc;
+}
+/* line 76, ../src/sass/style.scss */
+.timetable-list li h2:before {
+  content: '＊ ';
 }
 /* line 78, ../src/sass/style.scss */
 .timetable-list li p, .timetable-list li ul {
@@ -670,7 +688,8 @@ body {
 }
 /* line 85, ../src/sass/style.scss */
 .timetable-list li .slash-delimited-list li:after {
-  content: ' / ';
+  content: '/';
+  padding: 0 .3em;
 }
 /* line 86, ../src/sass/style.scss */
 .timetable-list li .slash-delimited-list li:last-child:after {
