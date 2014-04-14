@@ -11,13 +11,13 @@
     <li>{{lecture.term}}</li><li>{{lecture.divide}}</li><li>{{lecture.requiredSelective}}</li><li>{{lecture.credit}}単位</li>
   </ul>
   <h2>単位を落とすには</h2>
-  <p>{{lecture.failureAbsence}}</p>
+  <p ng-bind-html="lecture.failureAbsence | noHTML | newlines"></p>
   <h2>評価</h2>
-  <p>{{lecture.evaluation}}</p>
+  <p ng-bind-html="lecture.evaluation | noHTML | newlines"></p>
   <h2>概要</h2>
-  <p>{{lecture.abstract}}</p>
+  <p ng-bind-html="lecture.abstract | noHTML | newlines"></p>
   <h2>テキスト（参考文献）</h2>
-  <p>{{lecture.textbooks}}</p>
+  <p ng-bind-html="lecture.textbooks | noHTML | newlines"></p>
   <h2>連絡先</h2>
   <ul>
     <li ng-repeat="contact in lecture.contacts">{{contact.email}}</li>
