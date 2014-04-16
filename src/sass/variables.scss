@@ -1,0 +1,22 @@
+$text-color: #666;
+$bg-color: #eee;
+$base-color: #e67e22;
+$card-item-height: 64px;
+$card-item-margin: 8px;
+$card-item-shrink: 4px;
+$card-item-padding: 16px;
+$card-item-icon-size: $card-item-height - $card-item-padding * 2;
+$card-item-bg-color: #fff;
+$card-item-bg-color-disable: #ccc;
+
+$nav-btn-height: 32px;
+$nav-btn-height-shrink: 2px;
+$nav-btn-width: 18.4%;
+$nav-btn-width-shrink: 1%;
+$nav-btn-width-margin: (100% - $nav-btn-width * 5)/8;
+
+$color-m: rgba(153, 0, 0, 0.5);
+$color-e: rgba(204, 153, 0, 0.5);
+$color-c: rgba(0, 102, 204, 0.5);
+$color-a: rgba(0, 102, 0, 0.5);
+$color-adv: rgba(51, 51, 51, 0.5);

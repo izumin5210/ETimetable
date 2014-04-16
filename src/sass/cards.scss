@@ -1,0 +1,63 @@
+.card-set {
+  .card-item {
+    display: block;
+    position: relative;
+    margin: $card-item-margin;
+    padding: $card-item-padding;
+    color: $text-color;
+    background-color: $card-item-bg-color;
+    font-size: 80%;
+    line-height: 1.4em;
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+    &.card-item-disable {
+      background-color: $card-item-bg-color-disable;
+    }
+    &.card-item-fixed {
+      height: $card-item-height;
+      line-height: $card-item-height;
+      padding: 0 $card-item-padding;
+      &.card-item-shrinkable {
+        @include link-colors($text-color);
+        text-decoration: none;
+        &:hover, &:active {
+          height: $card-item-height - $card-item-shrink * 2;
+          line-height: $card-item-height - $card-item-shrink * 2;
+          margin: $card-item-margin + $card-item-shrink;
+          .caret {
+            height: $card-item-height - $card-item-shrink * 2;
+            line-height: $card-item-height - $card-item-shrink * 2;
+          }
+        }
+      }
+    }
+    .card-item-icon {
+      @include inline-block;
+      width: $card-item-icon-size;
+      height: $card-item-icon-size;
+      line-height: $card-item-icon-size;
+      margin-right: $card-item-padding;
+      text-align: center;
+      background: #999;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 75%;
+      @include border-radius(3px);
+      &.icon-m { background-color: $color-m;}
+      &.icon-e { background-color: $color-e;}
+      &.icon-c { background-color: $color-c;}
+      &.icon-a { background-color: $color-a;}
+    }
+    .card-item-content {
+      @include inline-block;
+    }
+    .card-item-caret {
+      @include inline-block;
+      position: absolute;
+      right: $card-item-padding + $card-item-icon-size/2;
+      height: $card-item-height;
+      line-height: $card-item-height;
+    }
+  }
+}

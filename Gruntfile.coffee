@@ -3,6 +3,8 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     coffee:
+      options:
+        bare: true
       compile:
         files: [
           expand: true
@@ -15,6 +17,7 @@ module.exports = (grunt) ->
       dist:
         options:
           config: 'config.rb'
+          specify: 'src/sass/style.scss'
     connect:
       livereload:
         options:

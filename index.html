@@ -13,21 +13,24 @@
   <div ng-view class="container"></div>
 
   <footer class="footer">
-    <p>
-      data: <a href="http://www.akashi.ac.jp/guide/opendata">明石高専オープンデータ</a>
-    </p>
-    <p>
-      app: <a href="//izumin.info">izumin5210</a>
-      <a href="//github.com/izumin5210"><i class="fa fa-github"></i></a>
-      <a href="//twitter.com/izumin5210"><i class="fa fa-twitter"></i></a>
-    </p>
-    <p>
+    <ul>
+      <li>
+        data: <a href="http://www.akashi.ac.jp/guide/opendata">明石高専オープンデータ</a>
+      </li>
+      <li>
+        app: <a href="//izumin.info">izumin5210</a>
+        <a href="//github.com/izumin5210"><i class="fa fa-github"></i></a>
+        <a href="//twitter.com/izumin5210"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li>
       use: <a href="http://www.akashi.ac.jp/guide/opendata">明石高専オープンデータ Web Api</a>
-    </p>
+      </li>
+    </ul>
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script>
     window.angular || document.write('<script src="vendor/javascripts/angular.min.js">\x3C/script>')
     try {
@@ -35,9 +38,14 @@
     } catch(e) {
       document.write('<script src="vendor/javascripts/angular-route.min.js">\x3C/script>');
     }
+    window._ || document.write('<script src="vendor/javascripts/underscore-min.js">\x3C/script>')
   </script>
   <script src="javascripts/app.js"></script>
+  <script src="javascripts/models/timetable.js"></script>
+  <script src="javascripts/models/timetable_column.js"></script>
+  <script src="javascripts/models/timetable_cell.js"></script>
   <script src="javascripts/filters/truncate.js"></script>
+  <script src="javascripts/filters/newlines.js"></script>
   <script src="javascripts/controllers/grades_ctrl.js"></script>
   <script src="javascripts/controllers/departments_ctrl.js"></script>
   <script src="javascripts/controllers/courses_ctrl.js"></script>
