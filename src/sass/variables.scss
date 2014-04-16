@@ -1,11 +1,11 @@
 $text-color: #666;
 $bg-color: #eee;
 $base-color: #e67e22;
-$card-item-height: 64px;
+$card-item-height: 32px;
 $card-item-margin: 8px;
 $card-item-shrink: 4px;
 $card-item-padding: 16px;
-$card-item-icon-size: $card-item-height - $card-item-padding * 2;
+$card-item-icon-size: $card-item-height;
 $card-item-bg-color: #fff;
 $card-item-bg-color-disable: #ccc;
 

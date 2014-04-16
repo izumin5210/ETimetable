@@ -74,9 +74,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: white;
   font-size: 80%;
   line-height: 1.4em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -86,40 +83,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 14, ../src/sass/cards.scss */
+/* line 13, ../src/sass/cards.scss */
 .card-set .card-item.card-item-disable {
   background-color: #cccccc;
 }
-/* line 17, ../src/sass/cards.scss */
+/* line 16, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed {
-  height: 64px;
-  line-height: 64px;
-  padding: 0 16px;
+  height: 32px;
+  line-height: 32px;
 }
-/* line 21, ../src/sass/cards.scss */
+/* line 19, ../src/sass/cards.scss */
+.card-set .card-item.card-item-fixed .card-item-content {
+  height: 32px;
+  line-height: 32px;
+}
+/* line 23, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed.card-item-shrinkable {
   color: #666666;
   text-decoration: none;
 }
-/* line 24, ../src/sass/cards.scss */
+/* line 26, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed.card-item-shrinkable:hover, .card-set .card-item.card-item-fixed.card-item-shrinkable:active {
-  height: 56px;
-  line-height: 56px;
   margin: 12px;
+  padding: 12px 16px;
 }
-/* line 28, ../src/sass/cards.scss */
-.card-set .card-item.card-item-fixed.card-item-shrinkable:hover .caret, .card-set .card-item.card-item-fixed.card-item-shrinkable:active .caret {
-  height: 56px;
-  line-height: 56px;
-}
-/* line 35, ../src/sass/cards.scss */
+/* line 32, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -129,49 +118,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #fff;
   text-transform: uppercase;
   font-size: 75%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  vertical-align: baseline;
 }
-/* line 47, ../src/sass/cards.scss */
+/* line 45, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 48, ../src/sass/cards.scss */
+/* line 46, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 49, ../src/sass/cards.scss */
+/* line 47, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 50, ../src/sass/cards.scss */
+/* line 48, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
 /* line 52, ../src/sass/cards.scss */
-.card-set .card-item .card-item-content {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-/* line 55, ../src/sass/cards.scss */
 .card-set .card-item .card-item-caret {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   position: absolute;
   right: 32px;
-  height: 64px;
-  line-height: 64px;
+  height: 32px;
+  line-height: 32px;
 }
 
 /* line 7, ../src/sass/style.scss */
