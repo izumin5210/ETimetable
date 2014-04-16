@@ -1,19 +1,19 @@
 <header class="header header-{{department.abbr}}">
-  <p>{{class_}}</p>
+  <h1>{{class_}}</h1>
 </header>
 
-<ul class="tab-wday tab-timetable">
+<ol class="tab-wday tab-timetable">
   <li ng-repeat="wday in [1, 2, 3, 4, 5]" ng-class="{active: currentWday==wday}">
     <a ng-href="{{href(wday)}}" ng-disabled="{{currentWday==wday}}">{{wdayJa[wday]}}</a>
   </li>
-</ul>
+</ol>
 
-<ul ng-repeat="wday in [1, 2, 3, 4, 5]" class="timetable-list" ng-class="{active: currentWday==wday}">
-  <li ng-repeat="period in [1, 2, 3, 4]">
-    <a ng-href="#/lectures/{{timetables[wday][period].lectureId}}" class="with-abbr">
-      <span class="abbr abbr-{{department.abbr}}">{{period}}</span>
-      {{timetables[wday][period].title | truncate:12}}
-      <span><i class="fa fa-chevron-right"></i></span>
-    </a>
+<ol ng-repeat="(wday, column) in timetable.columns" class="card-set" ng-class="{active: currentWday==wday}">
+  <li ng-repeat="(period, cell) in column.cells">
+  <a ng-click="onCellClicked(cell.ids())" class="card-item card-item-fixed" ng-class="{'card-item-shrinkable': cell.hasLectures(), 'card-item-disable':!cell.hasLectures()}">
+     <span class="card-item-icon icon-{{department.abbr}}">{{period}}</span>
+     <span class="card-item-content">{{cell.title() | truncate:15}}</span>
+     <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
+   </a>
   </li>
-</ul>
+</ol>

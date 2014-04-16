@@ -1,7 +1,7 @@
 app = angular.module 'ETimetable'
 
 app.controller 'TimetablesCtrl',
-  ($scope, $http, $routeParams, config) ->
+  ($scope, $http, $routeParams, $location, config) ->
 
     departmentIds = {m: 1, e: 2, c: 3, a: 4, adv: 5}
     courseIds = {d: 1, j: 2, me: 3, ac: 4}
@@ -10,7 +10,6 @@ app.controller 'TimetablesCtrl',
 
     $scope.wdayJa = ['日', '月', '火', '水', '木', '金', '土']
 
-    $scope.timetables = {}
     $scope.grade = $routeParams.grade
     $scope.department =
       abbr: $routeParams.department
@@ -36,8 +35,9 @@ app.controller 'TimetablesCtrl',
     params = angular.extend params, config.defaultParams
 
     $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
-      .success (data) ->
-        angular.forEach data, (t) ->
-          $scope.timetables[t.wday] = {} unless $scope.timetables[t.wday]?
-          $scope.timetables[t.wday][t.period] = t
+      .success (data) -> $scope.timetable = new Timetable(data)
 
+    $scope.onCellClicked = (ids) ->
+      if typeof ids == 'number'
+        $location.url "lectures/#{ids}"
+      else

@@ -1,8 +1,8 @@
 app = angular.module 'ETimetable', ['ngRoute']
 
 app.constant 'config',
-  apiEndpoint: 'http://localhost:3000/api/v1'
-  # apiEndpoint: 'http://anct.herokuapp.com/api/v1'
+  # apiEndpoint: 'http://localhost:3000/api/v1'
+  apiEndpoint: 'http://anct.herokuapp.com/api/v1'
   defaultParams:
     callback: 'JSON_CALLBACK'
 
