@@ -3,6 +3,7 @@
 
 @import 'variables';
 @import 'cards';
+@import 'tabs';
 
 body {
   background-color: $bg-color;
@@ -66,51 +67,3 @@ p, ul {
   padding: 8px;
 }
 
-.tab-wday {
-  margin: $card-item-margin;
-  li {
-    color: $text-color;
-    list-style: none;
-    width: $nav-btn-width;
-    height: $nav-btn-height;
-    line-height: $nav-btn-height;
-    margin: 0 $nav-btn-width-margin;
-    background: #fff;
-    text-align: center;
-    @include inline-block;
-    @include border-radius(3px);
-    @include box-sizing(border-box);
-    @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
-    &:first-child {
-      margin-left: 0;
-      &:hover, &:active { margin-left: $nav-btn-width-shrink; }
-      &.active { &:hover, &:active { margin-left: 0; } }
-    }
-    &:last-child {
-      margin-right: 0;
-      &:hover, &:active { margin-right: $nav-btn-width-shrink; }
-      &.active { &:hover, &:active { margin-right: 0; } }
-    }
-    a {
-      display: block;
-      @include link-colors($text-color);
-      text-decoration: none;
-      &[disabled=disabled] { cursor: default; }
-    }
-    &.active {
-      background-color: #ccc;
-      &:hover, &:active {
-        height: $nav-btn-height;
-        line-height: $nav-btn-height;
-        width: $nav-btn-width;
-        margin: 0 $nav-btn-width-margin;
-      }
-    }
-    &:hover, &:active {
-      height: $nav-btn-height - $nav-btn-height-shrink * 2;
-      line-height: $nav-btn-height - $nav-btn-height-shrink * 2;
-      width: $nav-btn-width - $nav-btn-width-shrink * 2;
-      margin: 0 $nav-btn-width-margin + $nav-btn-width-shrink;
-    }
-  }
-}

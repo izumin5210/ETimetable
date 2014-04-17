@@ -1,0 +1,9 @@
+<div>
+  <ul class="nav-tabs">
+    <li ng-repeat="tab in tabs" ng-click="select(tab)" class="tab" ng-class="{active: tab.active}">
+      {{tab.heading}}
+    </li>
+  </ul>
+  <div class="tab-content" ng-transclude>
+  </div>
+</div>
