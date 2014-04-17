@@ -85,7 +85,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 13, ../src/sass/cards.scss */
 .card-set .card-item.card-item-disable {
-  background-color: #cccccc;
+  background-color: #f6f6f6;
 }
 /* line 16, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed {
