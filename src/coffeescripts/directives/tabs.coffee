@@ -6,15 +6,25 @@ app.directive 'tabSet', ->
   templateUrl: 'templates/tabset.html'
   transclude: true
   scope: {}
-  controller: ($scope) ->
+  controller: ($scope, $location, TimetablesService) ->
     tabs = $scope.tabs = []
-    this.addTab = (tab) ->
-      tab.active = (tabs.length == 0)
+    selected = TimetablesService.currentTab
+
+    @addTab = (tab) ->
       tabs.push tab
+      if tabs.length > selected
+        $scope.select tabs[selected]
+      else
+        tab.active = (tabs.length == 0)
 
     $scope.select = (tab) ->
       angular.forEach tabs, (tab) -> tab.active = false
       tab.active = true
+
+    $scope.$on 'changeTab', (event, index) ->
+      selected = index
+      $scope.select tabs[index] if tabs.length > index
+
     return
   link: (scope, element, attrs, ctrl) ->
 
@@ -27,6 +37,7 @@ app.directive 'tabPane', ->
   transclude: true
   scope:
     heading: '@'
+    href: '@'
   link: (scope, element, attrs, ctrl) ->
     ctrl.addTab(scope)
 

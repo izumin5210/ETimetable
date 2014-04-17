@@ -2,7 +2,7 @@ var app;
 
 app = angular.module('ETimetable');
 
-app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location, config) {
+app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location, config, TimetablesService) {
   var courseIds, departmentIds, params;
   departmentIds = {
     m: 1,
@@ -48,6 +48,7 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
     course: $scope.course.id
   });
   params = angular.extend(params, config.defaultParams);
+  TimetablesService.changeTab($scope.currentWday - 1);
   $http.jsonp("" + config.apiEndpoint + "/timetables", {
     params: params
   }).success(function(data) {

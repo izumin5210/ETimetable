@@ -3,7 +3,7 @@
 </header>
 
 <tab-set>
-  <tab-pane ng-repeat="(wday, column) in timetable.columns" heading="{{wdayJa[wday]}}">
+<tab-pane ng-repeat="(wday, column) in timetable.columns" heading="{{wdayJa[wday]}}" href="{{href(wday)}}">
     <ol class="card-set">
       <li ng-repeat="(period, cell) in column.cells">
         <a ng-click="onCellClicked(cell.ids())" class="card-item card-item-fixed" ng-class="{'card-item-shrinkable': cell.hasLectures(), 'card-item-disable':!cell.hasLectures()}">

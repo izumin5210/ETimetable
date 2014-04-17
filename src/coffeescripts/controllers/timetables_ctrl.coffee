@@ -1,7 +1,7 @@
 app = angular.module 'ETimetable'
 
 app.controller 'TimetablesCtrl',
-  ($scope, $http, $routeParams, $location, config) ->
+  ($scope, $http, $routeParams, $location, config, TimetablesService) ->
 
     departmentIds = {m: 1, e: 2, c: 3, a: 4, adv: 5}
     courseIds = {d: 1, j: 2, me: 3, ac: 4}
@@ -34,8 +34,11 @@ app.controller 'TimetablesCtrl',
     params = angular.extend {}, {grade: $scope.grade, department: $scope.department.id, course: $scope.course.id}
     params = angular.extend params, config.defaultParams
 
+    TimetablesService.changeTab($scope.currentWday - 1)
+
     $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
-      .success (data) -> $scope.timetable = new Timetable(data)
+      .success (data) ->
+        $scope.timetable = new Timetable(data)
 
     $scope.onCellClicked = (ids) ->
       if typeof ids == 'number'

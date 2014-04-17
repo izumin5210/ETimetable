@@ -164,9 +164,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 5, ../src/sass/tabs.scss */
 .nav-tabs .tab {
   cursor: pointer;
-  display: block;
-  color: #666666;
-  text-decoration: none;
   color: #666666;
   width: 18.4%;
   height: 32px;
@@ -192,43 +189,49 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
-/* line 21, ../src/sass/tabs.scss */
+/* line 18, ../src/sass/tabs.scss */
+.nav-tabs .tab a {
+  display: block;
+  text-decoration: none;
+  color: #666666;
+}
+/* line 23, ../src/sass/tabs.scss */
 .nav-tabs .tab:first-child {
   margin-left: 0;
 }
-/* line 23, ../src/sass/tabs.scss */
+/* line 25, ../src/sass/tabs.scss */
 .nav-tabs .tab:first-child:hover, .nav-tabs .tab:first-child:active {
   margin-left: 1%;
 }
-/* line 24, ../src/sass/tabs.scss */
+/* line 26, ../src/sass/tabs.scss */
 .nav-tabs .tab:first-child.active:hover, .nav-tabs .tab:first-child.active:active {
   margin-left: 0;
 }
-/* line 26, ../src/sass/tabs.scss */
+/* line 28, ../src/sass/tabs.scss */
 .nav-tabs .tab:last-child {
   margin-right: 0;
 }
-/* line 28, ../src/sass/tabs.scss */
+/* line 30, ../src/sass/tabs.scss */
 .nav-tabs .tab:last-child:hover, .nav-tabs .tab:last-child:active {
   margin-right: 1%;
 }
-/* line 29, ../src/sass/tabs.scss */
+/* line 31, ../src/sass/tabs.scss */
 .nav-tabs .tab:last-child.active:hover, .nav-tabs .tab:last-child.active:active {
   margin-right: 0;
 }
-/* line 31, ../src/sass/tabs.scss */
+/* line 33, ../src/sass/tabs.scss */
 .nav-tabs .tab.active {
   cursor: default;
   background-color: #ccc;
 }
-/* line 34, ../src/sass/tabs.scss */
+/* line 36, ../src/sass/tabs.scss */
 .nav-tabs .tab.active:hover, .nav-tabs .tab.active:active {
   height: 32px;
   line-height: 32px;
   width: 18.4%;
   margin: 0 1%;
 }
-/* line 41, ../src/sass/tabs.scss */
+/* line 43, ../src/sass/tabs.scss */
 .nav-tabs .tab:hover, .nav-tabs .tab:active {
   height: 28px;
   line-height: 28px;
