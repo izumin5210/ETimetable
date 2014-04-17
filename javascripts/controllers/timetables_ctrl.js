@@ -49,11 +49,15 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
   });
   params = angular.extend(params, config.defaultParams);
   TimetablesService.changeTab($scope.currentWday - 1);
-  $http.jsonp("" + config.apiEndpoint + "/timetables", {
-    params: params
-  }).success(function(data) {
-    return $scope.timetable = new Timetable(data);
-  });
+  if (TimetablesService.cache[$scope.class_] != null) {
+    $scope.timetable = TimetablesService.cache[$scope.class_];
+  } else {
+    $http.jsonp("" + config.apiEndpoint + "/timetables", {
+      params: params
+    }).success(function(data) {
+      return TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data);
+    });
+  }
   return $scope.onCellClicked = function(ids) {
     if (typeof ids === 'number') {
       return $location.url("lectures/" + ids);

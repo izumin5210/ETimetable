@@ -36,9 +36,12 @@ app.controller 'TimetablesCtrl',
 
     TimetablesService.changeTab($scope.currentWday - 1)
 
-    $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
-      .success (data) ->
-        $scope.timetable = new Timetable(data)
+    if TimetablesService.cache[$scope.class_]?
+      $scope.timetable = TimetablesService.cache[$scope.class_]
+    else
+      $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
+        .success (data) ->
+          TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data)
 
     $scope.onCellClicked = (ids) ->
       if typeof ids == 'number'
