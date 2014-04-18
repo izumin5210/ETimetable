@@ -58,11 +58,18 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
       return TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data);
     });
   }
-  return $scope.onCellClicked = function(ids) {
-    if (typeof ids === 'number') {
-      return $location.url("lectures/" + ids);
+  $scope.onCellClicked = function(cell) {
+    if (typeof cell.ids() === 'number') {
+      return $location.url("lectures/" + (cell.ids()));
     } else {
-
+      return cell.active = true;
     }
+  };
+  $scope.onModalSelected = function(cell, lecture) {
+    $location.url("lectures/" + lecture.lectureId);
+    return cell.active = false;
+  };
+  return $scope.modalDismiss = function(cell) {
+    return cell.active = false;
   };
 });

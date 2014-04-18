@@ -43,7 +43,16 @@ app.controller 'TimetablesCtrl',
         .success (data) ->
           TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data)
 
-    $scope.onCellClicked = (ids) ->
-      if typeof ids == 'number'
-        $location.url "lectures/#{ids}"
+    $scope.onCellClicked = (cell) ->
+      if typeof cell.ids() == 'number'
+        $location.url "lectures/#{cell.ids()}"
       else
+        cell.active = true
+
+    $scope.onModalSelected = (cell, lecture) ->
+      $location.url "lectures/#{lecture.lectureId}"
+      cell.active = false
+
+    $scope.modalDismiss = (cell) ->
+      cell.active = false
+

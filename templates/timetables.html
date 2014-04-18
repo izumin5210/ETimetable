@@ -6,12 +6,29 @@
 <tab-pane ng-repeat="(wday, column) in timetable.columns" heading="{{wdayJa[wday]}}" href="{{href(wday)}}">
     <ol class="card-set">
       <li ng-repeat="(period, cell) in column.cells">
-        <a ng-click="onCellClicked(cell.ids())" class="card-item card-item-fixed" ng-class="{'card-item-shrinkable': cell.hasLectures(), 'card-item-disable':!cell.hasLectures()}">
+        <a ng-click="onCellClicked(cell)" class="card-item card-item-fixed" ng-class="{'card-item-shrinkable': cell.hasLectures(), 'card-item-disable':!cell.hasLectures()}">
           <span class="card-item-icon icon-{{department.abbr}}">{{period}}</span>
-          <span class="card-item-content">{{cell.title() | truncate:15}}</span>
+          <span class="card-item-content">{{cell.title() | truncate:13}}</span>
           <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
         </a>
+        <div class="modal-wrapper" ng-if="cell.hasMultiLectures()" ng-show="cell.active" ng-click="modalDismiss(cell)">
+          <div class="modal">
+            <header class="header header-{{department.abbr}}">
+              <h1>科目を選択</h1>
+            </header>
+            <ul class="card-set">
+              <li ng-repeat="lecture in cell.lectures">
+                <a ng-click="onModalSelected(cell, lecture)" class="card-item card-item-fixed card-item-shrinkable">
+                  <span class="card-item-icon icon-{{department.abbr}}">{{period}}</span>
+                  <span class="card-item-content">{{lecture.title | truncate:13}}</span>
+                  <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </li>
     </ol>
   </tab-pane>
 </tab-set>
+
