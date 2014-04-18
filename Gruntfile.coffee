@@ -34,5 +34,15 @@ module.exports = (grunt) ->
       coffee:
         files: 'src/coffeescripts/**/*.coffee'
         tasks: ['coffee']
+    buildcontrol:
+      options:
+        dir: './'
+        commit: true
+        push: true
+        message: 'Build %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      pages:
+        options:
+          remote: 'git@github.com:izumin5210/ETimetable.git'
+          branch: 'gh-pages'
 
   grunt.registerTask 'default', ['connect', 'watch']
