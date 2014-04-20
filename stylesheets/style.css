@@ -103,7 +103,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-decoration: none;
 }
 /* line 26, ../src/sass/cards.scss */
-.card-set .card-item.card-item-fixed.card-item-shrinkable:hover, .card-set .card-item.card-item-fixed.card-item-shrinkable:active {
+.card-set .card-item.card-item-fixed.card-item-shrinkable.hover, .card-set .card-item.card-item-fixed.card-item-shrinkable.active {
   margin: 12px;
   padding: 12px 16px;
 }
@@ -190,34 +190,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
 /* line 18, ../src/sass/tabs.scss */
+.nav-tabs .tab:first-child {
+  margin-left: 0;
+}
+/* line 20, ../src/sass/tabs.scss */
+.nav-tabs .tab:first-child:hover, .nav-tabs .tab:first-child:active {
+  margin-left: 1%;
+}
+/* line 21, ../src/sass/tabs.scss */
+.nav-tabs .tab:first-child.active:hover, .nav-tabs .tab:first-child.active:active {
+  margin-left: 0;
+}
+/* line 23, ../src/sass/tabs.scss */
+.nav-tabs .tab:last-child {
+  margin-right: 0;
+}
+/* line 25, ../src/sass/tabs.scss */
+.nav-tabs .tab:last-child:hover, .nav-tabs .tab:last-child:active {
+  margin-right: 1%;
+}
+/* line 26, ../src/sass/tabs.scss */
+.nav-tabs .tab:last-child.active:hover, .nav-tabs .tab:last-child.active:active {
+  margin-right: 0;
+}
+/* line 28, ../src/sass/tabs.scss */
 .nav-tabs .tab a {
   display: block;
   text-decoration: none;
   color: #666666;
-}
-/* line 23, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child {
-  margin-left: 0;
-}
-/* line 25, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child:hover, .nav-tabs .tab:first-child:active {
-  margin-left: 1%;
-}
-/* line 26, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child.active:hover, .nav-tabs .tab:first-child.active:active {
-  margin-left: 0;
-}
-/* line 28, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child {
-  margin-right: 0;
-}
-/* line 30, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child:hover, .nav-tabs .tab:last-child:active {
-  margin-right: 1%;
-}
-/* line 31, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child.active:hover, .nav-tabs .tab:last-child.active:active {
-  margin-right: 0;
 }
 /* line 33, ../src/sass/tabs.scss */
 .nav-tabs .tab.active {
@@ -225,14 +225,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: #ccc;
 }
 /* line 36, ../src/sass/tabs.scss */
-.nav-tabs .tab.active:hover, .nav-tabs .tab.active:active {
+.nav-tabs .tab.active.tab-hover, .nav-tabs .tab.active.tab-click {
   height: 32px;
   line-height: 32px;
   width: 18.4%;
   margin: 0 1%;
 }
 /* line 43, ../src/sass/tabs.scss */
-.nav-tabs .tab:hover, .nav-tabs .tab:active {
+.nav-tabs .tab.tab-hover, .nav-tabs .tab.tab-click {
   height: 28px;
   line-height: 28px;
   width: 16.4%;
@@ -372,31 +372,6 @@ p, ul {
 }
 
 /* line 70, ../src/sass/style.scss */
-.popover {
-  position: relative;
-  z-index: 1000;
-  color: #fff;
-  background-color: rgba(51, 51, 51, 0.8);
-  margin: 0 48px;
-  padding: 16px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-}
-/* line 79, ../src/sass/style.scss */
-.popover.popover-bottom:after {
-  position: absolute;
-  left: 48px;
-  top: -20px;
-  content: '';
-  border-bottom: 20px solid rgba(51, 51, 51, 0.8);
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-}
-
-/* line 91, ../src/sass/style.scss */
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -406,7 +381,7 @@ p, ul {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* line 99, ../src/sass/style.scss */
+/* line 78, ../src/sass/style.scss */
 .modal-wrapper .modal {
   position: relative;
   top: 25%;

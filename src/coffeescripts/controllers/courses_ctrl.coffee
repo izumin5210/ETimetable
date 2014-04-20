@@ -18,5 +18,3 @@ app.controller 'CoursesCtrl',
         {abbr: 'me', label: '機械・電子システム工学専攻', href: getHref('me')}
         {abbr: 'ac', label: '建築・都市システム工学専攻', href: getHref('ac')}
       ]
-
-

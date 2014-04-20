@@ -6,7 +6,7 @@ app.directive 'tabSet', ->
   templateUrl: 'templates/tabset.html'
   transclude: true
   scope: {}
-  controller: ($scope, $location, TimetablesService) ->
+  controller: ($scope, TimetablesService) ->
     tabs = $scope.tabs = []
     selected = TimetablesService.currentTab
 

@@ -9,7 +9,7 @@ app.directive('tabSet', function() {
     templateUrl: 'templates/tabset.html',
     transclude: true,
     scope: {},
-    controller: function($scope, $location, TimetablesService) {
+    controller: function($scope, TimetablesService) {
       var selected, tabs;
       tabs = $scope.tabs = [];
       selected = TimetablesService.currentTab;

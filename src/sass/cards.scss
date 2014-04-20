@@ -23,7 +23,7 @@
       &.card-item-shrinkable {
         @include link-colors($text-color);
         text-decoration: none;
-        &:hover, &:active {
+        &.hover, &.active {
           margin: $card-item-margin + $card-item-shrink;
           padding: $card-item-padding - $card-item-shrink $card-item-padding;
         }

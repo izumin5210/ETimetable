@@ -15,11 +15,6 @@
     @include border-radius(3px);
     @include box-sizing(border-box);
     @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
-    a {
-      display: block;
-      text-decoration: none;
-      @include link-colors($text-color);
-    }
     &:first-child {
       margin-left: 0;
       &:hover, &:active { margin-left: $nav-btn-width-shrink; }
@@ -30,17 +25,22 @@
       &:hover, &:active { margin-right: $nav-btn-width-shrink; }
       &.active { &:hover, &:active { margin-right: 0; } }
     }
+    a {
+      display: block;
+      text-decoration: none;
+      @include link-colors($text-color);
+    }
     &.active {
       cursor: default;
       background-color: #ccc;
-      &:hover, &:active {
+      &.tab-hover, &.tab-click {
         height: $nav-btn-height;
         line-height: $nav-btn-height;
         width: $nav-btn-width;
         margin: 0 $nav-btn-width-margin;
       }
     }
-    &:hover, &:active {
+    &.tab-hover, &.tab-click {
       height: $nav-btn-height - $nav-btn-height-shrink * 2;
       line-height: $nav-btn-height - $nav-btn-height-shrink * 2;
       width: $nav-btn-width - $nav-btn-width-shrink * 2;

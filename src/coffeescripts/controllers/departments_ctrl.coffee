@@ -12,4 +12,3 @@ app.controller 'DepartmentsCtrl',
       {abbr: 'c', label: '都市システム工学科', href: getHref('c')}
       {abbr: 'a', label: '建築学科', href: getHref('a')}
     ]
-

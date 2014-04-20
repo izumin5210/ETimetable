@@ -67,27 +67,6 @@ p, ul {
   padding: 8px;
 }
 
-.popover {
-  position: relative;
-  z-index: 1000;
-  color: #fff;
-  background-color: rgba(#333, 0.8);
-  margin: 0 48px;
-  padding: 16px;
-  @include border-radius(8px);
-  &.popover-bottom {
-    &:after {
-      position: absolute;
-      left: 48px;
-      top: -20px;
-      content: '';
-      border-bottom: 20px solid rgba(#333, 0.8);
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-    }
-  }
-}
-
 .modal-wrapper {
   position: fixed;
   top: 0;
