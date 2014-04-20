@@ -6,7 +6,7 @@ app.controller 'TimetablesCtrl',
     departmentIds = {m: 1, e: 2, c: 3, a: 4, adv: 5}
     courseIds = {d: 1, j: 2, me: 3, ac: 4}
 
-    $scope.currentWday = Math.min(Math.max($routeParams.wday || new Date().getDay(), 0), 5)
+    $scope.currentWday = Math.min(Math.max($routeParams.wday || new Date().getDay(), 1), 5)
 
     $scope.wdayJa = ['日', '月', '火', '水', '木', '金', '土']
 

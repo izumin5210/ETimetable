@@ -40,4 +40,3 @@ app.directive 'tabPane', ->
     href: '@'
   link: (scope, element, attrs, ctrl) ->
     ctrl.addTab(scope)
-

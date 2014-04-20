@@ -17,7 +17,7 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
     me: 3,
     ac: 4
   };
-  $scope.currentWday = Math.min(Math.max($routeParams.wday || new Date().getDay(), 0), 5);
+  $scope.currentWday = Math.min(Math.max($routeParams.wday || new Date().getDay(), 1), 5);
   $scope.wdayJa = ['日', '月', '火', '水', '木', '金', '土'];
   $scope.grade = $routeParams.grade;
   $scope.department = {
