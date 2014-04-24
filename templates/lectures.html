@@ -1,8 +1,10 @@
 <header class="header header-{{department.abbr}}">
-  <h1>{{class_}}</h1>
+  <h1 ng-hide="isLoading">{{class_}}</h1>
 </header>
 
-<article class="card-set">
+<div ng-include="'templates/loading.html'" ng-show="isLoading"></div>
+
+<article class="card-set" ng-hide="isLoading">
   <section class="card-item">
     <h1>{{lecture.title}}</h1>
     <ul class="slash-delimited-list">

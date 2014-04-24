@@ -2,10 +2,12 @@
   <h1>{{class_}}</h1>
 </header>
 
-<tab-set>
-  <tab-pane ng-repeat="(wday, column) in timetable.columns" heading="{{wdayJa[wday]}}" href="{{href(wday)}}">
+<div ng-include="'templates/loading.html'" ng-show="isLoading"></div>
+
+<tab-set ng-hide="isLoading">
+  <tab-pane ng-repeat="wday in [1, 2, 3, 4, 5]" heading="{{wdayJa[wday]}}" href="{{href(wday)}}">
     <ol class="card-set">
-      <li ng-repeat="(period, cell) in column.cells">
+      <li ng-repeat="(period, cell) in timetable.columns[wday].cells">
         <a ng-click="onCellClicked(cell)" cls-hover cls-active class="card-item card-item-fixed" ng-class="{'card-item-shrinkable': cell.hasLectures(), 'card-item-disable':!cell.hasLectures()}">
           <span class="card-item-icon icon-{{department.abbr}}">{{period}}</span>
           <span class="card-item-content">{{cell.title() | truncate:13}}</span>

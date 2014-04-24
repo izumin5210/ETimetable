@@ -3,6 +3,8 @@ app = angular.module 'ETimetable'
 app.controller 'TimetablesCtrl',
   ($scope, $http, $routeParams, $location, config, TimetablesService) ->
 
+    $scope.isLoading = true
+
     departmentIds = {m: 1, e: 2, c: 3, a: 4, adv: 5}
     courseIds = {d: 1, j: 2, me: 3, ac: 4}
 
@@ -38,10 +40,12 @@ app.controller 'TimetablesCtrl',
 
     if TimetablesService.cache[$scope.class_]?
       $scope.timetable = TimetablesService.cache[$scope.class_]
+      $scope.isLoading = false
     else
       $http.jsonp "#{config.apiEndpoint}/timetables", {params: params}
         .success (data) ->
           TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data)
+          $scope.isLoading = false
 
     $scope.onCellClicked = (cell) ->
       if typeof cell.ids() == 'number'

@@ -4,6 +4,7 @@ app = angular.module('ETimetable');
 
 app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location, config, TimetablesService) {
   var courseIds, departmentIds, params;
+  $scope.isLoading = true;
   departmentIds = {
     m: 1,
     e: 2,
@@ -51,11 +52,13 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
   TimetablesService.changeTab($scope.currentWday - 1);
   if (TimetablesService.cache[$scope.class_] != null) {
     $scope.timetable = TimetablesService.cache[$scope.class_];
+    $scope.isLoading = false;
   } else {
     $http.jsonp("" + config.apiEndpoint + "/timetables", {
       params: params
     }).success(function(data) {
-      return TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data);
+      TimetablesService.cache[$scope.class_] = $scope.timetable = new Timetable(data);
+      return $scope.isLoading = false;
     });
   }
   $scope.onCellClicked = function(cell) {
