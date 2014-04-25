@@ -28,6 +28,10 @@ module.exports = (grunt) ->
         cwd: '<%= config.app %>/src'
         src: 'templates/**.html'
         dest: '<%= config.app %>/javascripts/templates.js'
+        options:
+          htmlmin:
+            removeComments: true
+            collapseWhitespace: true
     clean: ['.tmp', '<%= config.dist %>/*', '!<%= config.dist %>/.git' ]
     copy:
       dist:
