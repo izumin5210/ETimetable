@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="ETimetable">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="izumin5210 <contact@izumin.info>">
+  <meta name="keywords" content="明石高専, 明石工業高等専門学校, 時間割, シラバス, オープンデータ, Code for KOSEN">
+  <meta name="description" content="明石高専オープンデータを利用した時間割とシラバスを閲覧するスマートフォン向けアプリです">
+  <meta property="og:title" content="ETimetable">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://izumin.info/ETimetable/images/ogp.png">
+  <meta property="og:url" content="http://izumin.info/ETimetable/">
+  <meta property="og:description" content="明石高専オープンデータを利用した時間割とシラバスを閲覧するスマートフォン向けアプリです">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ETimetable">
+  <meta name="twitter:description" content="明石高専オープンデータを利用した時間割とシラバスを閲覧するスマートフォン向けアプリです">
+  <meta name="twitter:image" content="http://izumin.info/ETimetable/images/twitter-cards.png">
+  <meta name="twitter:creator" content="@izumin5210">
+  <meta name="apple-mobile-web-app-title" content="ETimetable">
+  <link rel="icon" href="http://izumin.info/ETimetable/images/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="shortcut icon" href="http://izumin.info/ETimetable/images/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" href="http://izumin.info/ETimetable/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="stylesheets/app.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <div ng-view class="container"></div>
+
+  <footer class="footer">
+    <ul>
+      <li>
+        data: <a href="http://www.akashi.ac.jp/guide/opendata">明石高専オープンデータ</a>
+      </li>
+      <li>
+        app: <a href="//izumin.info">izumin5210</a>
+        <a href="//github.com/izumin5210"><i class="fa fa-github"></i></a>
+        <a href="//twitter.com/izumin5210"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li>
+      use: <a href="http://www.akashi.ac.jp/guide/opendata">明石高専オープンデータ Web Api</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script>
+    window.angular || document.write('<script src="vendor/javascripts/angular.min.js">\x3C/script>')
+    try {
+      window.angular.module('ngRoute');
+    } catch(e) {
+      document.write('<script src="vendor/javascripts/angular-route.min.js">\x3C/script>');
+    }
+    window._ || document.write('<script src="vendor/javascripts/underscore-min.js">\x3C/script>')
+  </script>
+  <script src="javascripts/app.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46661976-4', 'izumin.info');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
