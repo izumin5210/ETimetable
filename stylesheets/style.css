@@ -190,53 +190,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
 /* line 18, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child {
-  margin-left: 0;
-}
-/* line 20, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child:hover, .nav-tabs .tab:first-child:active {
-  margin-left: 1%;
-}
-/* line 21, ../src/sass/tabs.scss */
-.nav-tabs .tab:first-child.active:hover, .nav-tabs .tab:first-child.active:active {
-  margin-left: 0;
-}
-/* line 23, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child {
-  margin-right: 0;
-}
-/* line 25, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child:hover, .nav-tabs .tab:last-child:active {
-  margin-right: 1%;
-}
-/* line 26, ../src/sass/tabs.scss */
-.nav-tabs .tab:last-child.active:hover, .nav-tabs .tab:last-child.active:active {
-  margin-right: 0;
-}
-/* line 28, ../src/sass/tabs.scss */
 .nav-tabs .tab a {
   display: block;
   text-decoration: none;
   color: #666666;
 }
-/* line 33, ../src/sass/tabs.scss */
+/* line 23, ../src/sass/tabs.scss */
 .nav-tabs .tab.active {
   cursor: default;
   background-color: #ccc;
 }
-/* line 36, ../src/sass/tabs.scss */
+/* line 26, ../src/sass/tabs.scss */
 .nav-tabs .tab.active.tab-hover, .nav-tabs .tab.active.tab-click {
   height: 32px;
   line-height: 32px;
   width: 18.4%;
   margin: 0 1%;
 }
-/* line 43, ../src/sass/tabs.scss */
+/* line 31, ../src/sass/tabs.scss */
+.nav-tabs .tab.active.tab-hover:first-child, .nav-tabs .tab.active.tab-click:first-child {
+  margin-left: 0;
+}
+/* line 32, ../src/sass/tabs.scss */
+.nav-tabs .tab.active.tab-hover:last-child, .nav-tabs .tab.active.tab-click:last-child {
+  margin-right: 0;
+}
+/* line 35, ../src/sass/tabs.scss */
 .nav-tabs .tab.tab-hover, .nav-tabs .tab.tab-click {
   height: 28px;
   line-height: 28px;
   width: 16.4%;
   margin: 0 2%;
+}
+/* line 40, ../src/sass/tabs.scss */
+.nav-tabs .tab.tab-hover:first-child, .nav-tabs .tab.tab-click:first-child {
+  margin-left: 1%;
+}
+/* line 41, ../src/sass/tabs.scss */
+.nav-tabs .tab.tab-hover:last-child, .nav-tabs .tab.tab-click:last-child {
+  margin-right: 1%;
+}
+/* line 43, ../src/sass/tabs.scss */
+.nav-tabs .tab:first-child {
+  margin-left: 0;
+}
+/* line 44, ../src/sass/tabs.scss */
+.nav-tabs .tab:last-child {
+  margin-right: 0;
 }
 
 /* line 8, ../src/sass/style.scss */

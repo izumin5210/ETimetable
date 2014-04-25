@@ -21,8 +21,9 @@ module.exports = (grunt) ->
     compass:
       dist:
         options:
-          config: 'config.rb'
-          specify: '<%= config.app %>/src/sass/style.scss'
+          sassDir: '<%= config.app %>/src/sass'
+          cssDir: '<%= config.app %>/stylesheets'
+          specify: 'src/sass/style.scss'
     ngtemplates:
       'ETimetable':
         cwd: '<%= config.app %>/src'

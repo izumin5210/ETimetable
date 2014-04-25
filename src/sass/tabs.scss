@@ -15,16 +15,6 @@
     @include border-radius(3px);
     @include box-sizing(border-box);
     @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
-    &:first-child {
-      margin-left: 0;
-      &:hover, &:active { margin-left: $nav-btn-width-shrink; }
-      &.active { &:hover, &:active { margin-left: 0; } }
-    }
-    &:last-child {
-      margin-right: 0;
-      &:hover, &:active { margin-right: $nav-btn-width-shrink; }
-      &.active { &:hover, &:active { margin-right: 0; } }
-    }
     a {
       display: block;
       text-decoration: none;
@@ -38,6 +28,8 @@
         line-height: $nav-btn-height;
         width: $nav-btn-width;
         margin: 0 $nav-btn-width-margin;
+        &:first-child { margin-left: 0; }
+        &:last-child { margin-right: 0; }
       }
     }
     &.tab-hover, &.tab-click {
@@ -45,7 +37,11 @@
       line-height: $nav-btn-height - $nav-btn-height-shrink * 2;
       width: $nav-btn-width - $nav-btn-width-shrink * 2;
       margin: 0 $nav-btn-width-margin + $nav-btn-width-shrink;
+      &:first-child { margin-left: $nav-btn-width-shrink; }
+      &:last-child { margin-right: $nav-btn-width-shrink; }
     }
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
   }
 }
 
