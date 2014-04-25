@@ -21,6 +21,7 @@
         line-height: $card-item-height;
       }
       &.card-item-shrinkable {
+        cursor: pointer;
         @include link-colors($text-color);
         text-decoration: none;
         &.hover, &.active {

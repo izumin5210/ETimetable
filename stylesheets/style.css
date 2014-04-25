@@ -99,15 +99,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 23, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed.card-item-shrinkable {
+  cursor: pointer;
   color: #666666;
   text-decoration: none;
 }
-/* line 26, ../src/sass/cards.scss */
+/* line 27, ../src/sass/cards.scss */
 .card-set .card-item.card-item-fixed.card-item-shrinkable.hover, .card-set .card-item.card-item-fixed.card-item-shrinkable.active {
   margin: 12px;
   padding: 12px 16px;
 }
-/* line 32, ../src/sass/cards.scss */
+/* line 33, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon {
   width: 32px;
   height: 32px;
@@ -131,23 +132,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 3px;
   vertical-align: baseline;
 }
-/* line 45, ../src/sass/cards.scss */
+/* line 46, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 46, ../src/sass/cards.scss */
+/* line 47, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 47, ../src/sass/cards.scss */
+/* line 48, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 48, ../src/sass/cards.scss */
+/* line 49, ../src/sass/cards.scss */
 .card-set .card-item .card-item-icon.icon-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 52, ../src/sass/cards.scss */
+/* line 53, ../src/sass/cards.scss */
 .card-set .card-item .card-item-caret {
   position: absolute;
   right: 32px;
