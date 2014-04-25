@@ -1,0 +1,12 @@
+<header class="header">
+  <h1>コースを選択</h1>
+</header>
+<ul class="card-set">
+  <li ng-repeat="course in courses">
+    <a ng-href="{{course.href}}" cls-hover cls-active class="card-item card-item-fixed card-item-shrinkable">
+      <abbr title="{{course.label}}" class="card-item-icon">{{course.abbr}}</abbr>
+      <span class="card-item-content">{{course.label}}</span>
+      <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </li>
+</ul>

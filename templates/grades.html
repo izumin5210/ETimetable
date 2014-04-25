@@ -1,0 +1,11 @@
+<header class="header">
+  <h1>学年を選択</h1>
+</header>
+<ul class="card-set">
+  <li ng-repeat="grade in grades">
+    <a ng-href="{{grade.href}}" cls-hover cls-active class="card-item card-item-fixed card-item-shrinkable">
+      <span class="card-item-content">{{grade.label}}</span>
+      <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </li>
+</ul>

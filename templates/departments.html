@@ -1,0 +1,12 @@
+<header class="header">
+  <h1>学科を選択</h1>
+</header>
+<ul class="card-set">
+  <li ng-repeat="department in departments">
+    <a ng-href="{{department.href}}" cls-hover cls-active class="card-item card-item-fixed card-item-shrinkable">
+      <abbr title="{{department.label}}" class="card-item-icon icon-{{department.abbr}}">{{department.abbr}}</abbr>
+      <span class="card-item-content">{{department.label}}</span>
+      <span class="card-item-caret"><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </li>
+</ul>

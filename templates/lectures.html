@@ -1,0 +1,34 @@
+<header class="header header-{{department.abbr}}">
+  <h1 ng-hide="isLoading">{{class_}}</h1>
+</header>
+
+<div ng-include="'templates/loading.html'" ng-show="isLoading"></div>
+
+<article class="card-set" ng-hide="isLoading">
+  <section class="card-item">
+    <h1>{{lecture.title}}</h1>
+    <ul class="slash-delimited-list">
+      <li ng-repeat="lecturer in lecture.lecturers">{{lecturer.name}}</li>
+    </ul>
+    <ul class="slash-delimited-list">
+      <li>{{lecture.term}}</li><li>{{lecture.divide}}</li><li>{{lecture.requiredSelective}}</li><li>{{lecture.credit}}単位</li>
+    </ul>
+    <h2>単位を落とすには</h2>
+    <p ng-bind-html="lecture.failureAbsence | noHTML | newlines"></p>
+    <h2>評価</h2>
+    <p ng-bind-html="lecture.evaluation | noHTML | newlines"></p>
+    <h2>概要</h2>
+    <p ng-bind-html="lecture.abstract | noHTML | newlines"></p>
+    <h2>テキスト（参考文献）</h2>
+    <p ng-bind-html="lecture.textbooks | noHTML | newlines"></p>
+    <h2>連絡先</h2>
+    <ul>
+      <li ng-repeat="contact in lecture.contacts">{{contact.email}}</li>
+    </ul>
+  </section>
+
+  <section class="card-item" ng-repeat="plan in lecture.plans | orderBy:'number'">
+    <h1>#{{plan.number}} {{plan.title}}</h1>
+    <p>{{plan.detail}}</p>
+  </section>
+</article>
