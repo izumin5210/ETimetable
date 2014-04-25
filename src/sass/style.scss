@@ -20,6 +20,15 @@ body {
   color: #fff;
   background-color: $base-color;
   @include single-box-shadow(rgba(#666, 0.2), 1px, 1px, 3px);
+  .page-back {
+    display: block;
+    position: absolute;
+    font-size: 75%;
+    left: $card-item-margin;
+    z-index: 1000;
+    text-decoration: none;
+    @include link-colors(#fff, rgba(#fff, 0.8), rgba(#fff, 0.8), #fff, rgba(#fff, 0.8));
+  }
   h1 {
     text-align: center;
     font-size: 100%;

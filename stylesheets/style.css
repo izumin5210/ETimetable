@@ -261,32 +261,58 @@ body {
   box-shadow: 1px 1px 3px rgba(102, 102, 102, 0.2);
 }
 /* line 23, ../src/sass/style.scss */
+.header .page-back {
+  display: block;
+  position: absolute;
+  font-size: 75%;
+  left: 8px;
+  z-index: 1000;
+  text-decoration: none;
+  color: white;
+}
+/* line 18, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.header .page-back:visited {
+  color: white;
+}
+/* line 21, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.header .page-back:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 24, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.header .page-back:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 27, ../../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.header .page-back:active {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 32, ../src/sass/style.scss */
 .header h1 {
   text-align: center;
   font-size: 100%;
 }
-/* line 27, ../src/sass/style.scss */
+/* line 36, ../src/sass/style.scss */
 .header.header-m {
   background-color: rgba(153, 0, 0, 0.5);
 }
-/* line 28, ../src/sass/style.scss */
+/* line 37, ../src/sass/style.scss */
 .header.header-e {
   background-color: rgba(204, 153, 0, 0.5);
 }
-/* line 29, ../src/sass/style.scss */
+/* line 38, ../src/sass/style.scss */
 .header.header-c {
   background-color: rgba(0, 102, 204, 0.5);
 }
-/* line 30, ../src/sass/style.scss */
+/* line 39, ../src/sass/style.scss */
 .header.header-a {
   background-color: rgba(0, 102, 0, 0.5);
 }
-/* line 31, ../src/sass/style.scss */
+/* line 40, ../src/sass/style.scss */
 .header.header-adv {
   background-color: rgba(51, 51, 51, 0.5);
 }
 
-/* line 34, ../src/sass/style.scss */
+/* line 43, ../src/sass/style.scss */
 .footer {
   height: 48px;
   line-height: 1.8em;
@@ -297,7 +323,7 @@ body {
   padding-top: 8px;
   margin: 0 8px;
 }
-/* line 40, ../src/sass/style.scss */
+/* line 49, ../src/sass/style.scss */
 .footer a {
   color: #666666;
 }
@@ -318,7 +344,7 @@ body {
   color: #e67e22;
 }
 
-/* line 46, ../src/sass/style.scss */
+/* line 55, ../src/sass/style.scss */
 .slash-delimited-list {
   /* @include delimited-list(' / '); */
   margin: 0;
@@ -340,38 +366,38 @@ body {
   *display: inline;
   white-space: nowrap;
 }
-/* line 50, ../src/sass/style.scss */
+/* line 59, ../src/sass/style.scss */
 .slash-delimited-list li:after {
   content: '/';
   padding: 0 .3em;
 }
-/* line 51, ../src/sass/style.scss */
+/* line 60, ../src/sass/style.scss */
 .slash-delimited-list li:last-child:after {
   content: '';
 }
 
-/* line 55, ../src/sass/style.scss */
+/* line 64, ../src/sass/style.scss */
 h1 {
   font-size: 120%;
   margin-bottom: 12px;
 }
 
-/* line 60, ../src/sass/style.scss */
+/* line 69, ../src/sass/style.scss */
 h2 {
   margin-top: 12px;
   border-bottom: 1px solid #ccc;
 }
-/* line 63, ../src/sass/style.scss */
+/* line 72, ../src/sass/style.scss */
 h2:before {
   content: '＊ ';
 }
 
-/* line 66, ../src/sass/style.scss */
+/* line 75, ../src/sass/style.scss */
 p, ul {
   padding: 8px;
 }
 
-/* line 70, ../src/sass/style.scss */
+/* line 79, ../src/sass/style.scss */
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -381,7 +407,7 @@ p, ul {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* line 78, ../src/sass/style.scss */
+/* line 87, ../src/sass/style.scss */
 .modal-wrapper .modal {
   position: relative;
   top: 25%;

@@ -29,6 +29,17 @@ app.controller('TimetablesCtrl', function($scope, $http, $routeParams, $location
     abbr: $routeParams.course,
     id: courseIds[$routeParams.course]
   };
+  if ($scope.course.abbr != null) {
+    $scope.pageBack = {
+      label: 'コースを選択',
+      href: "#/" + $scope.grade + "/" + $scope.department.abbr + "/courses"
+    };
+  } else {
+    $scope.pageBack = {
+      label: '学科を選択',
+      href: "#/" + $scope.grade + "/departments"
+    };
+  }
   $scope.href = function(wday) {
     if ($scope.course.abbr != null) {
       return "#/" + $scope.grade + "/" + $scope.department.abbr + "/" + $scope.course.abbr + "/timetables/" + wday;

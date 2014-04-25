@@ -3,8 +3,10 @@ app = angular.module 'ETimetable'
 app.controller 'DepartmentsCtrl',
   ($scope, $routeParams) ->
 
+    $scope.grade = $routeParams.grade
+
     getHref = (department) ->
-      "#/#{$routeParams.grade}/#{department}/#{if $routeParams.grade > 3 && department == 'e' then 'courses' else 'timetables'}"
+      "#/#{$scope.grade}/#{department}/#{if $scope.grade > 3 && department == 'e' then 'courses' else 'timetables'}"
 
     $scope.departments = [
       {abbr: 'm', label: '機械工学科', href: getHref('m')}

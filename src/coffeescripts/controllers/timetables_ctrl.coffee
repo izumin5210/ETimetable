@@ -20,6 +20,15 @@ app.controller 'TimetablesCtrl',
       abbr: $routeParams.course
       id: courseIds[$routeParams.course]
 
+    if $scope.course.abbr?
+      $scope.pageBack =
+        label: 'コースを選択'
+        href: "#/#{$scope.grade}/#{$scope.department.abbr}/courses"
+    else
+      $scope.pageBack =
+        label: '学科を選択'
+        href: "#/#{$scope.grade}/departments"
+
     $scope.href = (wday) ->
       if $scope.course.abbr?
         "#/#{$scope.grade}/#{$scope.department.abbr}/#{$scope.course.abbr}/timetables/#{wday}"

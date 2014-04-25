@@ -3,13 +3,14 @@ var app;
 app = angular.module('ETimetable');
 
 app.controller('CoursesCtrl', function($scope, $routeParams) {
-  var department, getHref;
+  var department, getHref, grade;
+  grade = $routeParams.grade;
   department = $routeParams.department;
   getHref = function(courses) {
-    return "#/" + $routeParams.grade + "/" + department + "/" + courses + "/timetables";
+    return "#/" + grade + "/" + department + "/" + courses + "/timetables";
   };
   if (department === 'e') {
-    return $scope.courses = [
+    $scope.courses = [
       {
         abbr: 'd',
         label: '電気電子工学コース',
@@ -20,8 +21,12 @@ app.controller('CoursesCtrl', function($scope, $routeParams) {
         href: getHref('j')
       }
     ];
+    return $scope.pageBack = {
+      label: '学科を選択',
+      href: "#/" + grade + "/departments"
+    };
   } else if (department === 'adv') {
-    return $scope.courses = [
+    $scope.courses = [
       {
         abbr: 'me',
         label: '機械・電子システム工学専攻',
@@ -32,5 +37,9 @@ app.controller('CoursesCtrl', function($scope, $routeParams) {
         href: getHref('ac')
       }
     ];
+    return $scope.pageBack = {
+      label: '学年を選択',
+      href: '#/grades'
+    };
   }
 });
