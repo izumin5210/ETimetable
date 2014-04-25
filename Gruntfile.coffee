@@ -1,7 +1,12 @@
 module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
 
+  config =
+    app: '.'
+    dist: 'dist'
+
   grunt.initConfig
+    config: config
     coffee:
       options:
         bare: true
@@ -18,6 +23,31 @@ module.exports = (grunt) ->
         options:
           config: 'config.rb'
           specify: 'src/sass/style.scss'
+    clean: ['.tmp', '<%= config.dist %>/*', '!<%= config.dist %>/.git' ]
+    copy:
+      dist:
+        files: [
+          expand: true
+          dest: '<%= config.dist %>'
+          src: [
+            '<%= config.app %>/index.html'
+            '<%= config.app %>/templates/**'
+            '<%= config.app %>/images/**'
+            '<%= config.app %>/vendor/**'
+          ]
+        ]
+    uglify:
+      options:
+        mangle: false
+    useminPrepare:
+      html: '<%= config.dist %>/index.html'
+      options:
+        root: '<%= config.app %>'
+        dest: '<%= config.dist %>'
+    usemin:
+      html: '<%= config.dist %>/index.html'
+      options:
+        dest: '<%= config.dist %>'
     connect:
       livereload:
         options:
@@ -36,7 +66,7 @@ module.exports = (grunt) ->
         tasks: ['coffee']
     buildcontrol:
       options:
-        dir: './'
+        dir: '<%= config.dist %>'
         commit: true
         push: true
         message: 'Build %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
@@ -46,3 +76,4 @@ module.exports = (grunt) ->
           branch: 'gh-pages'
 
   grunt.registerTask 'default', ['connect', 'watch']
+  grunt.registerTask 'build', ['clean', 'copy:dist', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin']
