@@ -13,16 +13,21 @@ module.exports = (grunt) ->
       compile:
         files: [
           expand: true
-          cwd: 'src/coffeescripts'
+          cwd: '<%= config.app %>/src/coffeescripts'
           src: ['**/*.coffee']
-          dest: 'javascripts'
+          dest: '<%= config.app %>/javascripts'
           ext: '.js'
         ]
     compass:
       dist:
         options:
           config: 'config.rb'
-          specify: 'src/sass/style.scss'
+          specify: '<%= config.app %>/src/sass/style.scss'
+    ngtemplates:
+      'ETimetable':
+        cwd: '<%= config.app %>/src'
+        src: 'templates/**.html'
+        dest: '<%= config.app %>/javascripts/templates.js'
     clean: ['.tmp', '<%= config.dist %>/*', '!<%= config.dist %>/.git' ]
     copy:
       dist:
@@ -31,7 +36,6 @@ module.exports = (grunt) ->
           dest: '<%= config.dist %>'
           src: [
             '<%= config.app %>/index.html'
-            '<%= config.app %>/templates/**'
             '<%= config.app %>/images/**'
             '<%= config.app %>/vendor/**'
           ]
@@ -59,11 +63,14 @@ module.exports = (grunt) ->
       html:
         files: '**/*.html'
       compass:
-        files: 'src/sass/**/*.scss'
+        files: '<%= config.app %>/src/sass/**/*.scss'
         tasks: ['compass']
       coffee:
-        files: 'src/coffeescripts/**/*.coffee'
+        files: '<%= config.app %>/src/coffeescripts/**/*.coffee'
         tasks: ['coffee']
+      ngtemplates:
+        files: '<%= config.app %>/src/templates/**.html'
+        tasks: ['ngtemplates']
     buildcontrol:
       options:
         dir: '<%= config.dist %>'
